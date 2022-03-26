@@ -60,11 +60,12 @@ nav {
 
     .nav__bar {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
         justify-content: space-between;
         list-style-type: none;
         gap: 1rem;
+        width: 75%;
         padding-bottom: 4rem;
 
         .btn-group {
@@ -75,9 +76,17 @@ nav {
 
             .dropdown-menu {
 
+                position: absolute;
+                inset: 30px auto auto 0px;
+                margin: 0px;
+                transition: .5s ease;
+                transform: unset;
+
                 .btn-submenu {
+                    font-weight: normal;
                     color: black;
                     box-shadow: unset;
+                    padding: 0.25rem 1rem;
                 }
 
                 .dropdown-item {
@@ -94,6 +103,7 @@ nav {
         
 
         .link {
+            font-weight: bold;
             background-color: unset;
             color: white;
             padding: 0.375rem 0.75rem;
@@ -125,7 +135,7 @@ nav {
 
             .btn-group {
                 button {
-                    padding: 0 1rem;
+                    padding: 0.375rem 0.75rem;
                     font-size: $lg-fontsize;
                 }
 

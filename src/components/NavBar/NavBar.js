@@ -9,7 +9,7 @@ const NavBar = () => {
             <a href="/" className="enlace-logo"><img src="../images/logo.png" className="logo" alt="goat-hoops-logo"/></a>
 
             <div className="nav__bar">
-                <div className="btn-group">
+                <div className="btn-group dropdown">
                     <button className="btn btn-secondary dropdown-toggle link" type="button" id="dropdownMenuClickableInside" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
                         Productos
                     </button>
@@ -17,7 +17,7 @@ const NavBar = () => {
                         <li>
                             <div className="btn-group dropend">
                                 <button className="btn btn-secondary dropdown-toggle link btn-submenu" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Productos
+                                    Camisetas
                                 </button>
                                 <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton2">
                                     <li><a className="dropdown-item" href="#">Icon</a></li>

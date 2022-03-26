@@ -54,20 +54,30 @@ nav .enlace-logo .logo {
 }
 nav .nav__bar {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: space-between;
   list-style-type: none;
   gap: 1rem;
+  width: 75%;
   padding-bottom: 4rem;
 }
 nav .nav__bar .btn-group button.btn {
   text-align: center;
   font-family: "Arimo", sans-serif;
 }
+nav .nav__bar .btn-group .dropdown-menu {
+  position: absolute;
+  inset: 30px auto auto 0px;
+  margin: 0px;
+  transition: 0.5s ease;
+  transform: unset;
+}
 nav .nav__bar .btn-group .dropdown-menu .btn-submenu {
+  font-weight: normal;
   color: black;
   box-shadow: unset;
+  padding: 0.25rem 1rem;
 }
 nav .nav__bar .btn-group .dropdown-menu .dropdown-item {
   text-decoration: none;
@@ -77,6 +87,7 @@ nav .nav__bar .btn-group .dropdown-menu li:not(:last-of-type) {
   border-bottom: 1px solid gainsboro;
 }
 nav .nav__bar .link {
+  font-weight: bold;
   background-color: unset;
   color: white;
   padding: 0.375rem 0.75rem;
@@ -104,7 +115,7 @@ nav .nav__bar .link {
     padding: 0;
   }
   nav .nav__bar .btn-group button {
-    padding: 0 1rem;
+    padding: 0.375rem 0.75rem;
     font-size: 1.6rem;
   }
   nav .nav__bar .btn-group .dropdown-menu .dropdown-item {
