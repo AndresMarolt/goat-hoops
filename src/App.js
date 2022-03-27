@@ -1,14 +1,24 @@
 import NavBar from './components/NavBar/NavBar';
+import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 
+const App = () => {
 
+  const title = "Ecommerce";
 
-function App() {
   return (
-    <header className="App-header">
-        <div className="contenedor">
-          <NavBar />
+    <>
+      <header className="App-header">
+          <div className="contenedor">
+            <NavBar />
+          </div>
+      </header>
+
+      <main>
+        <div className='contenedor'>
+          <ItemListContainer greeting={'Greeting de ItemListContainer'} />
         </div>
-    </header>
+      </main>
+    </>
   );
 }
 

@@ -1,9 +1,11 @@
+import CartWidget from '../CartWidget/CartWidget'
 import './NavBar.css'
 import '../../../node_modules/bootstrap/dist/css/bootstrap.css'
-import '../../../node_modules/bootstrap/dist/js/bootstrap.js'
+import '../../../node_modules/bootstrap/dist/js/bootstrap'
 
 
 const NavBar = () => {
+
     return (
         <nav>
             <a href="/" className="enlace-logo"><img src="../images/logo.png" className="logo" alt="goat-hoops-logo"/></a>
@@ -34,6 +36,7 @@ const NavBar = () => {
 
                 <a href='#' className='link'>Nosotros</a>
                 <a href='#' className='link'>Contacto</a>
+                <CartWidget />
 
             </div>
 

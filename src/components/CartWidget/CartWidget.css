@@ -1,0 +1,21 @@
+.carrito {
+  color: white;
+  display: flex;
+  align-items: flex-start;
+  justify-items: center;
+  gap: 0.5rem;
+  font-size: 1.4rem;
+}
+.carrito__icono {
+  align-self: flex-start;
+  margin-top: 3px;
+}
+.carrito__cantidad {
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .carrito {
+    font-size: 1.6rem;
+  }
+}/*# sourceMappingURL=CartWidget.css.map */

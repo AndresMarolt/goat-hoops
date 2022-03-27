@@ -1,0 +1,29 @@
+$fuenteHeading:'Montserrat', sans-serif;
+$fuenteParrafos: 'Arimo', sans-serif;
+
+$sm-fontsize: 1.4rem;
+$lg-fontsize: 1.6rem;
+
+.carrito {
+    color: white;
+    display: flex;
+    align-items: flex-start;
+    justify-items: center;
+    gap: .5rem;
+    font-size: $sm-fontsize;
+
+    &__icono {
+        align-self: flex-start;
+        margin-top: 3px;
+    }
+
+    &__cantidad {
+        margin: 0;
+    }
+}
+
+@media(min-width: 768px) {
+    .carrito {
+        font-size: $lg-fontsize;
+    }
+}

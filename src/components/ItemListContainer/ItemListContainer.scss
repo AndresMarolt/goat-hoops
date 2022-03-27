@@ -1,0 +1,13 @@
+$fuenteHeading:'Montserrat', sans-serif;
+$fuenteParrafos: 'Arimo', sans-serif;
+
+$sm-fontsize: 1.4rem;
+$lg-fontsize: 1.6rem;
+
+.greeting {
+    font-family: $fuenteHeading;
+    font-weight: bold;
+    margin-top: 3rem;
+    text-align: center;
+    color: rgb(117, 117, 117);
+}

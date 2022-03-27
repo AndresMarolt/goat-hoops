@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&family=Montserrat:wght@400;700&display=swap');
+
+$fuenteHeading:'Montserrat', sans-serif;
+$fuenteParrafos: 'Arimo', sans-serif;
+
+$sm-fontsize: 1.4rem;
+$lg-fontsize: 1.6rem;
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;   /* 1 rem = 10 pixeles */
+}
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+
+html body{
+    line-height: 1.5;     /* Interlineado */
+    background-color: #f6f6f6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+header {
+    background-color: #1a1a1a;
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    margin: 0;
+}
+
+button.btn {
+    font-size: $sm-fontsize;
+}
+
+.contenedor {
+    margin: 0 auto;
+    width: 85%;
+}
