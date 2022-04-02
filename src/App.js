@@ -3,8 +3,6 @@ import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 
 const App = () => {
 
-  const title = "Ecommerce";
-
   return (
     <>
       <header className="App-header">

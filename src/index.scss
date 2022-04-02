@@ -6,6 +6,10 @@ $fuenteParrafos: 'Arimo', sans-serif;
 $sm-fontsize: 1.4rem;
 $lg-fontsize: 1.6rem;
 
+$azul: #17408B;
+$blanco: #ffffff;
+$rojo: #C9082A;
+
 html{
     box-sizing: border-box;
     font-size: 62.5%;   /* 1 rem = 10 pixeles */
@@ -27,7 +31,7 @@ code {
 }
 
 header {
-    background-color: #1a1a1a;
+    background-color: $azul;
     margin: 0;
     padding: 0;
 }
