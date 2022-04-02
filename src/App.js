@@ -2,7 +2,7 @@ import NavBar from './components/NavBar/NavBar';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 
 const App = () => {
-
+  
   return (
     <>
       <header className="App-header">
@@ -13,7 +13,7 @@ const App = () => {
 
       <main>
         <div className='contenedor'>
-          <ItemListContainer greeting={'Greeting de ItemListContainer'} />
+          <ItemListContainer />
         </div>
       </main>
     </>

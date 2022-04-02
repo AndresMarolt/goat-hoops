@@ -1,0 +1,51 @@
+$fuenteHeading:'Montserrat', sans-serif;
+$fuenteParrafos: 'Arimo', sans-serif;
+
+$sm-fontsize: 1.4rem;
+$lg-fontsize: 1.6rem;
+
+$azul: #17408B;
+$rojo: #C9082A;
+$blanco: #ffffff;
+
+.agregar__carrito {
+    font-family: $fuenteParrafos;
+    font-weight: bold;
+    font-size: 1.2rem;
+    width: 45%;
+    margin: 5rem auto 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+
+    &-controles {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-between;
+        background-color: #c94059;
+    }
+    
+    &-boton {
+        padding: .5rem 0;
+    }
+}
+
+button {
+    color: $blanco;
+    font-weight: bold;
+    font-family: $fuenteParrafos;
+    border: none;
+    background-color: #c94059;
+}
+
+p {
+    color: $blanco;
+    margin: 0;
+}
+
+@media(min-width: 1024px) {
+    .agregar__carrito {
+        width: 20%;
+    }
+}
