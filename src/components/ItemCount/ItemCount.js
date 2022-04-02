@@ -6,17 +6,15 @@ const ItemCount = ({stock, initial, onAdd}) => {
     const [counterState, setCounter] = useState({count: initial});
 
     const decrement = () => {
-        /* if(counterState.count > 1) {
+        if(counterState.count > 1) {
             setCounter({...counterState, count: counterState.count - 1})
-        } */
-        setCounter({...counterState, count: counterState.count - 1})
+        }
     }
 
     const increment = () => {
-        /* if(counterState.count < stock) {
+        if(counterState.count < stock) {
             setCounter({...counterState, count: counterState.count + 1})
-        } */
-        setCounter({...counterState, count: counterState.count + 1})
+        }
     }
 
     return(
@@ -27,7 +25,7 @@ const ItemCount = ({stock, initial, onAdd}) => {
                 <button type='button' onClick={increment}>+</button>
             </div>
             
-            <button type='button' className='agregar__carrito-boton' onClick={ () => onAdd(counterState.count, stock)}>Agregar al Carrito</button>
+            <button type='button' className='agregar__carrito-boton' onClick={ () => onAdd(counterState.count)}>Agregar al Carrito</button>
 
         </div>
     )
