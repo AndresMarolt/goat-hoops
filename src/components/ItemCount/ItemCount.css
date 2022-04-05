@@ -4,33 +4,19 @@
   font-size: 1.2rem;
   width: 45%;
   margin: 5rem auto 0 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  gap: .5rem;
+  flex-direction: column;
+  gap: 0.5rem;
 }
-
 .agregar__carrito-controles {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  flex-direction: row;
   width: 100%;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   background-color: #c94059;
 }
-
 .agregar__carrito-boton {
-  padding: .5rem 0;
+  padding: 0.5rem 0;
 }
 
 button {
@@ -50,5 +36,4 @@ p {
   .agregar__carrito {
     width: 20%;
   }
-}
-/*# sourceMappingURL=ItemCount.css.map */
+}/*# sourceMappingURL=ItemCount.css.map */

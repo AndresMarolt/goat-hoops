@@ -8,7 +8,7 @@ const NavBar = () => {
 
     return (
         <nav>
-            <a href="/" className="enlace-logo"><img src="../images/logo.png" className="logo" alt="goat-hoops-logo"/></a>
+            <a href="/" className="enlace-logo"><img src="../img/logo.png" className="logo" alt="goat-hoops-logo"/></a>
 
             <div className="nav__bar">
                 <div className="btn-group dropdown">
@@ -23,6 +23,7 @@ const NavBar = () => {
                                 </button>
                                 <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton2">
                                     <li><a className="dropdown-item" href="#">Icon</a></li>
+                                    <li><a className="dropdown-item" href="#">Association</a></li>
                                     <li><a className="dropdown-item" href="#">City Edition</a></li>
                                     <li><a className="dropdown-item" href="#">Throwback</a></li>
                                 </ul>
