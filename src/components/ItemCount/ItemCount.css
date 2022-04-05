@@ -29,6 +29,11 @@
   background-color: #c94059;
 }
 
+.agregar__carrito-controles p {
+  color: #ffffff;
+  margin: 0;
+}
+
 .agregar__carrito-boton {
   padding: .5rem 0;
 }
@@ -39,11 +44,6 @@ button {
   font-family: "Arimo", sans-serif;
   border: none;
   background-color: #c94059;
-}
-
-p {
-  color: #ffffff;
-  margin: 0;
 }
 
 @media (min-width: 1024px) {

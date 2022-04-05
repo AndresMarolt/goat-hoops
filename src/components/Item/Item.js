@@ -8,8 +8,8 @@ const Item = ({equipo, jugador, tipo, precio, img}) => {
             </div>
 
             <div className="Producto__comprar">
-                <o className="Producto__comprar-titulo">{equipo} - {jugador} [{tipo}]</o>
-                <o className="Producto__comprar-precio">{precio}</o>
+                <p className="Producto__comprar-titulo">{equipo} - {jugador} [{tipo}]</p>
+                <p className="Producto__comprar-precio">{precio}</p>
             </div>
 
             <button className="Btn-info">Ver Más</button>
