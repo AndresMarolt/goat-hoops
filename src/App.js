@@ -14,8 +14,8 @@ const App = () => {
 
       <main>
         <div className='contenedor'>
-          <ItemListContainer />
           <ItemDetailContainer />
+          <ItemListContainer />
         </div>
       </main>
     </>

@@ -6,7 +6,8 @@ const products = [
         "jugador": "Trae Young",
         "tipo": "Icon",
         "precio": "$8500",
-        "img": "img/camisetas/Atlanta/young.webp"
+        "img": "img/camisetas/Atlanta/young.webp",
+        "descripcion": ""
     },
     {
         "id": 2,
@@ -15,7 +16,8 @@ const products = [
         "jugador": "Jaylen Brown",
         "tipo": "Icon",
         "precio": "$8500",
-        "img": "img/camisetas/Boston/brown.webp"
+        "img": "img/camisetas/Boston/brown.webp",
+        "descripcion": ""
     },
     {
         "id": 3,
@@ -24,7 +26,8 @@ const products = [
         "jugador": "Zach LaVine",
         "tipo": "Icon",
         "precio": "$8500",
-        "img": "img/camisetas/Chicago/lavine.jpg"
+        "img": "img/camisetas/Chicago/lavine.jpg",
+        "descripcion": ""
     },
     {
         "id": 4,
@@ -33,7 +36,8 @@ const products = [
         "jugador": "Darius Garland",
         "tipo": "Association",
         "precio": "$8500",
-        "img": "img/camisetas/Cleveland/garland1.webp"
+        "img": "img/camisetas/Cleveland/garland1.webp",
+        "descripcion": ""
     },
     {
         "id": 5,
@@ -42,7 +46,8 @@ const products = [
         "jugador": "Darius Garland",
         "tipo": "Icon",
         "precio": "$8500",
-        "img": "img/camisetas/Cleveland/garland.webp"
+        "img": "img/camisetas/Cleveland/garland.webp",
+        "descripcion": "You already cheer the loudest at every Cleveland Cavaliers game. Take your fandom up a notch and show that you're the ultimate Darius Garland fan when you pick up this Swingman jersey from Nike. When you wear this authentic jersey while cheering on your team, you stand out as much more than just a fan. Let everyone know you're a true Cleveland Cavaliers fan with the heart of a champion."
     },
     {
         "id": 6,
@@ -51,7 +56,8 @@ const products = [
         "jugador": "Evan Mobley",
         "tipo": "City",
         "precio": "$8500",
-        "img": "img/camisetas/Cleveland/mobley.webp"
+        "img": "img/camisetas/Cleveland/mobley.webp",
+        "descripcion": ""
     },
     {
         "id": 7,
@@ -60,7 +66,8 @@ const products = [
         "jugador": "Luka Dončić",
         "tipo": "Association",
         "precio": "$8500",
-        "img": "img/camisetas/Dallas/doncic.webp"
+        "img": "img/camisetas/Dallas/doncic.webp",
+        "descripcion": ""
     },
     {
         "id": 8,
@@ -69,7 +76,8 @@ const products = [
         "jugador": "Myles Turner",
         "tipo": "Icon",
         "precio": "$8500",
-        "img": "img/camisetas/Indiana/turner.webp"
+        "img": "img/camisetas/Indiana/turner.webp",
+        "descripcion": ""
     },
     {
         "id": 9,
@@ -78,7 +86,8 @@ const products = [
         "jugador": "LeBron James",
         "tipo": "City Edition",
         "precio": "$8500",
-        "img": "img/camisetas/Los Angeles (Lakers)/lebron.webp"
+        "img": "img/camisetas/Los Angeles (Lakers)/lebron.webp",
+        "descripcion": ""
     },
     {
         "id": 10,
@@ -87,7 +96,8 @@ const products = [
         "jugador": "Ja Morant",
         "tipo": "Association",
         "precio": "$8500",
-        "img": "img/camisetas/Memphis/morant.webp"
+        "img": "img/camisetas/Memphis/morant.webp",
+        "descripcion": ""
     },
     {
         "id": 11,
@@ -96,7 +106,8 @@ const products = [
         "jugador": "Karl-Anthony Towns",
         "tipo": "Association",
         "precio": "$8500",
-        "img": "img/camisetas/Minnesota/towns.webp"
+        "img": "img/camisetas/Minnesota/towns.webp",
+        "descripcion": ""
     },
     {
         "id": 12,
@@ -105,7 +116,8 @@ const products = [
         "jugador": "Brandon Ingram",
         "tipo": "Association",
         "precio": "$8500",
-        "img": "img/camisetas/New Orleans/ingram.webp"
+        "img": "img/camisetas/New Orleans/ingram.webp",
+        "descripcion": ""
     },
     {
         "id": 13,
@@ -114,7 +126,8 @@ const products = [
         "jugador": "RJ Barrett",
         "tipo": "Icon",
         "precio": "$8500",
-        "img": "img/camisetas/New York/barrett.webp"
+        "img": "img/camisetas/New York/barrett.webp",
+        "descripcion": ""
     },
     {
         "id": 14,
@@ -123,7 +136,8 @@ const products = [
         "jugador": "Josh Giddey",
         "tipo": "Association",
         "precio": "$8500",
-        "img": "img/camisetas/Oklahoma/giddey.webp"
+        "img": "img/camisetas/Oklahoma/giddey.webp",
+        "descripcion": ""
     },
     {
         "id": 15,
@@ -132,7 +146,8 @@ const products = [
         "jugador": "Devin Booker",
         "tipo": "Icon",
         "precio": "$8500",
-        "img": "img/camisetas/Phoenix/booker.webp"
+        "img": "img/camisetas/Phoenix/booker.webp",
+        "descripcion": ""
     },
     {
         "id": 16,
@@ -141,7 +156,8 @@ const products = [
         "jugador": "Shawn Marion",
         "tipo": "Throwback",
         "precio": "$8500",
-        "img": "img/camisetas/Phoenix/marion.webp"
+        "img": "img/camisetas/Phoenix/marion.webp",
+        "descripcion": ""
     },
     {
         "id": 17,
@@ -150,7 +166,8 @@ const products = [
         "jugador": "Clyde Drexler",
         "tipo": "Throwback",
         "precio": "$8500",
-        "img": "img/camisetas/Portland/drexler.webp"
+        "img": "img/camisetas/Portland/drexler.webp",
+        "descripcion": ""
     },
     {
         "id": 18,
@@ -159,7 +176,8 @@ const products = [
         "jugador": "Damian Lillard",
         "tipo": "Icon",
         "precio": "$8500",
-        "img": "img/camisetas/Portland/lillard.webp"
+        "img": "img/camisetas/Portland/lillard.webp",
+        "descripcion": ""
     }
 ];
 
@@ -174,7 +192,7 @@ export const obtainProducts = () => {
 export const obtainDetail = () => {
     return new Promise( resolve => {
         setTimeout(() => {
-            resolve(products.filter((prod) => prod.id < 5));
-        }, 2000);
+            resolve(products.find((prod) => prod.id === 5));
+        }, 1000);
     })
 }

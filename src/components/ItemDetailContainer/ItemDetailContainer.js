@@ -5,7 +5,7 @@ import { useEffect } from "react";
 
 const ItemDetailContainer = () => {
 
-    const [product, setProduct] = useState([]);
+    const [product, setProduct] = useState({});
 
     useEffect(() => {
         obtainDetail()
@@ -16,10 +16,10 @@ const ItemDetailContainer = () => {
             })
     }, [])
 
-    console.log(...product);
-
     return(
-        <ItemDetail product={product}></ItemDetail>
+        <div>
+            <ItemDetail key={product.id} {...product}></ItemDetail>
+        </div>
     )
 }
 
