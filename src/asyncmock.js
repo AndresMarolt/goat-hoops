@@ -1,6 +1,7 @@
 const products = [
     {
         "id": 1,
+        "categoria": "Camiseta",
         "equipo": "Atlanta Hawks",
         "jugador": "Trae Young",
         "tipo": "Icon",
@@ -9,6 +10,7 @@ const products = [
     },
     {
         "id": 2,
+        "categoria": "Camiseta",
         "equipo": "Boston Celtics",
         "jugador": "Jaylen Brown",
         "tipo": "Icon",
@@ -17,6 +19,7 @@ const products = [
     },
     {
         "id": 3,
+        "categoria": "Camiseta",
         "equipo": "Chicago Bulls",
         "jugador": "Zach LaVine",
         "tipo": "Icon",
@@ -25,6 +28,7 @@ const products = [
     },
     {
         "id": 4,
+        "categoria": "Camiseta",
         "equipo": "Cleveland Cavaliers",
         "jugador": "Darius Garland",
         "tipo": "Association",
@@ -33,6 +37,7 @@ const products = [
     },
     {
         "id": 5,
+        "categoria": "Camiseta",
         "equipo": "Cleveland Cavaliers",
         "jugador": "Darius Garland",
         "tipo": "Icon",
@@ -41,6 +46,7 @@ const products = [
     },
     {
         "id": 6,
+        "categoria": "Camiseta",
         "equipo": "Cleveland Cavaliers",
         "jugador": "Evan Mobley",
         "tipo": "City",
@@ -49,6 +55,7 @@ const products = [
     },
     {
         "id": 7,
+        "categoria": "Camiseta",
         "equipo": "Dallas Mavericks",
         "jugador": "Luka Dončić",
         "tipo": "Association",
@@ -57,6 +64,7 @@ const products = [
     },
     {
         "id": 8,
+        "categoria": "Camiseta",
         "equipo": "Indiana Pacers",
         "jugador": "Myles Turner",
         "tipo": "Icon",
@@ -65,6 +73,7 @@ const products = [
     },
     {
         "id": 9,
+        "categoria": "Camiseta",
         "equipo": "LA Lakers",
         "jugador": "LeBron James",
         "tipo": "City Edition",
@@ -73,6 +82,7 @@ const products = [
     },
     {
         "id": 10,
+        "categoria": "Camiseta",
         "equipo": "Memphis Grizzlies",
         "jugador": "Ja Morant",
         "tipo": "Association",
@@ -81,6 +91,7 @@ const products = [
     },
     {
         "id": 11,
+        "categoria": "Camiseta",
         "equipo": "Minnesota Timberwolves",
         "jugador": "Karl-Anthony Towns",
         "tipo": "Association",
@@ -89,6 +100,7 @@ const products = [
     },
     {
         "id": 12,
+        "categoria": "Camiseta",
         "equipo": "New Orleans Pelicans",
         "jugador": "Brandon Ingram",
         "tipo": "Association",
@@ -97,6 +109,7 @@ const products = [
     },
     {
         "id": 13,
+        "categoria": "Camiseta",
         "equipo": "New York Knicks",
         "jugador": "RJ Barrett",
         "tipo": "Icon",
@@ -105,6 +118,7 @@ const products = [
     },
     {
         "id": 14,
+        "categoria": "Camiseta",
         "equipo": "Oklahoma City Thunder",
         "jugador": "Josh Giddey",
         "tipo": "Association",
@@ -113,6 +127,7 @@ const products = [
     },
     {
         "id": 15,
+        "categoria": "Camiseta",
         "equipo": "Phoenix Suns",
         "jugador": "Devin Booker",
         "tipo": "Icon",
@@ -121,6 +136,7 @@ const products = [
     },
     {
         "id": 16,
+        "categoria": "Camiseta",
         "equipo": "Phoenix Suns",
         "jugador": "Shawn Marion",
         "tipo": "Throwback",
@@ -129,6 +145,7 @@ const products = [
     },
     {
         "id": 17,
+        "categoria": "Camiseta",
         "equipo": "Portland Trail Blazers",
         "jugador": "Clyde Drexler",
         "tipo": "Throwback",
@@ -137,6 +154,7 @@ const products = [
     },
     {
         "id": 18,
+        "categoria": "Camiseta",
         "equipo": "Portland Trail Blazers",
         "jugador": "Damian Lillard",
         "tipo": "Icon",
@@ -148,7 +166,15 @@ const products = [
 export const obtainProducts = () => {
     return new Promise( resolve => {
         setTimeout(() => {
-            resolve(products)
+            resolve(products);
+        }, 2000);
+    })
+}
+
+export const obtainDetail = () => {
+    return new Promise( resolve => {
+        setTimeout(() => {
+            resolve(products.filter((prod) => prod.id < 5));
         }, 2000);
     })
 }
