@@ -1,7 +1,8 @@
 $fuenteHeading:'Montserrat', sans-serif;
 $fuenteParrafos: 'Arimo', sans-serif;
 
-$sm-fontsize: 1.4rem;
+$sm-fontsize: 1.2rem;
+$md-size: 1.4rem;
 $lg-fontsize: 1.6rem;
 
 $azul: #17408B;
@@ -22,8 +23,9 @@ $blanco: #ffffff;
     font-size: $sm-fontsize;
 
     &__img {
+        text-align: center;
         img {
-            width: 100%;
+            width: 130px;
         }
     }
 
@@ -38,6 +40,7 @@ $blanco: #ffffff;
         &-titulo {
             text-align: center;
             justify-self: flex-start;
+            margin: 0;
         }
 
         &-precio {
@@ -57,20 +60,36 @@ $blanco: #ffffff;
     border-radius: 8px;
     border: none;
     justify-self: flex-end;
+    
 }
 
 @media(min-width: 768px) {
     
     .Producto {
-        height: 38rem;
+        font-size: $md-size;
+        height: 25rem;
+
+        &__img {
+            text-align: center;            
+            img {
+                width: 50%;
+            }
+        }
     }
 }
 
 @media(min-width: 1024px) {
 
     .Producto {
+        font-size: $md-size;
         padding: 2rem;
-        height: 40rem;
+        height: 35rem;
+
+        &__img {         
+            img {
+                width: 220px;
+            }
+        }
     }
     
 }

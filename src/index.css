@@ -1,14 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&family=Montserrat:wght@400;700&display=swap");
 html {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   font-size: 62.5%;
   /* 1 rem = 10 pixeles */
 }
 
 *, *:before, *:after {
-  -webkit-box-sizing: inherit;
-          box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 html body {
@@ -20,7 +18,7 @@ html body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
 header {
@@ -29,16 +27,8 @@ header {
   padding: 0;
 }
 
-p {
-  margin: 0;
-}
-
-button.btn {
-  font-size: 1.4rem;
-}
 
 .contenedor {
   margin: 0 auto;
   width: 85%;
-}
-/*# sourceMappingURL=index.css.map */
+}/*# sourceMappingURL=index.css.map */
