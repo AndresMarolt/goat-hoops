@@ -1,14 +1,14 @@
 import CartWidget from '../CartWidget/CartWidget'
 import './NavBar.css'
 import '../../../node_modules/bootstrap/dist/css/bootstrap.css'
-import '../../../node_modules/bootstrap/dist/js/bootstrap'
-
+import '../../../node_modules/bootstrap/dist/js/bootstrap.js'
+import { Link } from 'react-router-dom'
 
 const NavBar = () => {
 
     return (
-        <nav>
-            <a href="/" className="enlace-logo"><img src="../img/logo.png" className="logo" alt="goat-hoops-logo"/></a>
+        <nav className='contenedor'>
+            <Link to={'./'} className='enlace-logo'><img src="../img/logo.png" className="logo" alt="goat-hoops-logo"/></Link>
 
             <div className="nav__bar">
                 <div className="btn-group dropdown">
@@ -22,21 +22,21 @@ const NavBar = () => {
                                     Camisetas
                                 </button>
                                 <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton2">
-                                    <li><a className="dropdown-item" href="#">Icon</a></li>
-                                    <li><a className="dropdown-item" href="#">Association</a></li>
-                                    <li><a className="dropdown-item" href="#">City Edition</a></li>
-                                    <li><a className="dropdown-item" href="#">Throwback</a></li>
+                                    <li><Link to={'/categoria/Camiseta/icon'} className="dropdown-item">Icon</Link></li>
+                                    <li><Link to={'/categoria/Camiseta/association'} className="dropdown-item">Association</Link></li>
+                                    <li><Link to={'/categoria/Camiseta/city-edition'} className="dropdown-item">City Edition</Link></li>
+                                    <li><Link to={'/categoria/Camiseta/throwback'} className="dropdown-item">Throwback</Link></li>
                                 </ul>
                             </div>
                         </li>
-                        <li><a className="dropdown-item" href="#">Remeras</a></li>
-                        <li><a className="dropdown-item" href="#">Shorts</a></li>
-                        <li><a className="dropdown-item" href="#">Buzos</a></li>
+                        <li><Link to={'/categoria/Remera'} className='dropdown-item'>Remeras</Link></li>
+                        <li><Link to={'/categoria/Short'} className='dropdown-item'>Shorts</Link></li>
+                        <li><Link to={'/categoria/Buzo'} className='dropdown-item'>Buzos</Link></li>
                     </ul>
                 </div>
 
-                <a href='#' className='link'>Nosotros</a>
-                <a href='#' className='link'>Contacto</a>
+                <Link to={'/nosotros'} className="link">Nosotros</Link>
+                <Link to={'/contacto'} className="link">Contacto</Link>
                 <CartWidget ammount="2"/>
 
             </div>

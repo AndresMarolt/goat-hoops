@@ -1,198 +1,216 @@
 const products = [
     {
-        "id": 1,
-        "categoria": "Camiseta",
+        "id": "1",
+        "categoriaId": "Camiseta",
         "equipo": "Atlanta Hawks",
         "jugador": "Trae Young",
-        "tipo": "Icon",
+        "tipoId": "icon",
         "precio": "$8500",
-        "img": "img/camisetas/Atlanta/young.webp",
+        "img": "/img/camisetas/Atlanta/young.webp",
         "descripcion": ""
     },
     {
-        "id": 2,
-        "categoria": "Camiseta",
+        "id": "2",
+        "categoriaId": "Camiseta",
         "equipo": "Boston Celtics",
         "jugador": "Jaylen Brown",
-        "tipo": "Icon",
+        "tipoId": "icon",
         "precio": "$8500",
-        "img": "img/camisetas/Boston/brown.webp",
+        "img": "/img/camisetas/Boston/brown.webp",
         "descripcion": ""
     },
     {
-        "id": 3,
-        "categoria": "Camiseta",
+        "id": "3",
+        "categoriaId": "Camiseta",
         "equipo": "Chicago Bulls",
         "jugador": "Zach LaVine",
-        "tipo": "Icon",
+        "tipoId": "icon",
         "precio": "$8500",
-        "img": "img/camisetas/Chicago/lavine.jpg",
+        "img": "/img/camisetas/Chicago/lavine.jpg",
         "descripcion": ""
     },
     {
-        "id": 4,
-        "categoria": "Camiseta",
+        "id": "4",
+        "categoriaId": "Camiseta",
         "equipo": "Cleveland Cavaliers",
         "jugador": "Darius Garland",
-        "tipo": "Association",
+        "tipoId": "association",
         "precio": "$8500",
-        "img": "img/camisetas/Cleveland/garland1.webp",
+        "img": "/img/camisetas/Cleveland/garland1.webp",
         "descripcion": ""
     },
     {
-        "id": 5,
-        "categoria": "Camiseta",
+        "id": "5",
+        "categoriaIdId": "Camiseta",
         "equipo": "Cleveland Cavaliers",
         "jugador": "Darius Garland",
-        "tipo": "Icon",
+        "tipoId": "icon",
         "precio": "$8500",
-        "img": "img/camisetas/Cleveland/garland.webp",
+        "img": "/img/camisetas/Cleveland/garland.webp",
         "descripcion": "You already cheer the loudest at every Cleveland Cavaliers game. Take your fandom up a notch and show that you're the ultimate Darius Garland fan when you pick up this Swingman jersey from Nike. When you wear this authentic jersey while cheering on your team, you stand out as much more than just a fan. Let everyone know you're a true Cleveland Cavaliers fan with the heart of a champion."
     },
     {
-        "id": 6,
-        "categoria": "Camiseta",
+        "id": "6",
+        "categoriaId": "Camiseta",
         "equipo": "Cleveland Cavaliers",
         "jugador": "Evan Mobley",
-        "tipo": "City",
+        "tipoId": "City",
         "precio": "$8500",
-        "img": "img/camisetas/Cleveland/mobley.webp",
+        "img": "/img/camisetas/Cleveland/mobley.webp",
         "descripcion": ""
     },
     {
-        "id": 7,
-        "categoria": "Camiseta",
+        "id": "7",
+        "categoriaId": "Camiseta",
         "equipo": "Dallas Mavericks",
         "jugador": "Luka Dončić",
-        "tipo": "Association",
+        "tipoId": "association",
         "precio": "$8500",
-        "img": "img/camisetas/Dallas/doncic.webp",
+        "img": "/img/camisetas/Dallas/doncic.webp",
         "descripcion": ""
     },
     {
-        "id": 8,
-        "categoria": "Camiseta",
+        "id": "8",
+        "categoriaId": "Camiseta",
         "equipo": "Indiana Pacers",
         "jugador": "Myles Turner",
-        "tipo": "Icon",
+        "tipoId": "icon",
         "precio": "$8500",
-        "img": "img/camisetas/Indiana/turner.webp",
+        "img": "/img/camisetas/Indiana/turner.webp",
         "descripcion": ""
     },
     {
-        "id": 9,
-        "categoria": "Camiseta",
+        "id": "9",
+        "categoriaId": "Camiseta",
         "equipo": "LA Lakers",
         "jugador": "LeBron James",
-        "tipo": "City Edition",
+        "tipoId": "City Edition",
         "precio": "$8500",
-        "img": "img/camisetas/Los Angeles (Lakers)/lebron.webp",
+        "img": "/img/camisetas/Los Angeles (Lakers)/lebron.webp",
         "descripcion": ""
     },
     {
-        "id": 10,
-        "categoria": "Camiseta",
+        "id": "10",
+        "categoriaId": "Camiseta",
         "equipo": "Memphis Grizzlies",
         "jugador": "Ja Morant",
-        "tipo": "Association",
+        "tipoId": "association",
         "precio": "$8500",
-        "img": "img/camisetas/Memphis/morant.webp",
+        "img": "/img/camisetas/Memphis/morant.webp",
         "descripcion": ""
     },
     {
-        "id": 11,
-        "categoria": "Camiseta",
+        "id": "11",
+        "categoriaId": "Camiseta",
         "equipo": "Minnesota Timberwolves",
         "jugador": "Karl-Anthony Towns",
-        "tipo": "Association",
+        "tipoId": "association",
         "precio": "$8500",
-        "img": "img/camisetas/Minnesota/towns.webp",
+        "img": "/img/camisetas/Minnesota/towns.webp",
         "descripcion": ""
     },
     {
-        "id": 12,
-        "categoria": "Camiseta",
+        "id": "12",
+        "categoriaId": "Camiseta",
         "equipo": "New Orleans Pelicans",
         "jugador": "Brandon Ingram",
-        "tipo": "Association",
+        "tipoId": "association",
         "precio": "$8500",
-        "img": "img/camisetas/New Orleans/ingram.webp",
+        "img": "/img/camisetas/New Orleans/ingram.webp",
         "descripcion": ""
     },
     {
-        "id": 13,
-        "categoria": "Camiseta",
+        "id": "13",
+        "categoriaId": "Camiseta",
         "equipo": "New York Knicks",
         "jugador": "RJ Barrett",
-        "tipo": "Icon",
+        "tipoId": "icon",
         "precio": "$8500",
-        "img": "img/camisetas/New York/barrett.webp",
+        "img": "/img/camisetas/New York/barrett.webp",
         "descripcion": ""
     },
     {
-        "id": 14,
-        "categoria": "Camiseta",
+        "id": "14",
+        "categoriaId": "Camiseta",
         "equipo": "Oklahoma City Thunder",
         "jugador": "Josh Giddey",
-        "tipo": "Association",
+        "tipoId": "association",
         "precio": "$8500",
-        "img": "img/camisetas/Oklahoma/giddey.webp",
+        "img": "/img/camisetas/Oklahoma/giddey.webp",
         "descripcion": ""
     },
     {
-        "id": 15,
-        "categoria": "Camiseta",
+        "id": "15",
+        "categoriaId": "Camiseta",
         "equipo": "Phoenix Suns",
         "jugador": "Devin Booker",
-        "tipo": "Icon",
+        "tipoId": "icon",
         "precio": "$8500",
-        "img": "img/camisetas/Phoenix/booker.webp",
+        "img": "/img/camisetas/Phoenix/booker.webp",
         "descripcion": ""
     },
     {
-        "id": 16,
-        "categoria": "Camiseta",
+        "id": "16",
+        "categoriaId": "Camiseta",
         "equipo": "Phoenix Suns",
         "jugador": "Shawn Marion",
-        "tipo": "Throwback",
+        "tipoId": "throwback",
         "precio": "$8500",
-        "img": "img/camisetas/Phoenix/marion.webp",
+        "img": "/img/camisetas/Phoenix/marion.webp",
         "descripcion": ""
     },
     {
-        "id": 17,
-        "categoria": "Camiseta",
+        "id": "17",
+        "categoriaId": "Camiseta",
         "equipo": "Portland Trail Blazers",
         "jugador": "Clyde Drexler",
-        "tipo": "Throwback",
+        "tipoId": "throwback",
         "precio": "$8500",
-        "img": "img/camisetas/Portland/drexler.webp",
+        "img": "/img/camisetas/Portland/drexler.webp",
         "descripcion": ""
     },
     {
-        "id": 18,
-        "categoria": "Camiseta",
+        "id": "18",
+        "categoriaId": "Camiseta",
         "equipo": "Portland Trail Blazers",
         "jugador": "Damian Lillard",
-        "tipo": "Icon",
+        "tipoId": "icon",
         "precio": "$8500",
-        "img": "img/camisetas/Portland/lillard.webp",
+        "img": "/img/camisetas/Portland/lillard.webp",
+        "descripcion": ""
+    } ,
+    {
+        "id": "19",
+        "categoriaId": "Short",
+        "equipo": "Chicago Bulls",
+        "jugador": "sdf",
+        "tipoId": "icon",
+        "precio": "$8500",
+        "img": "/img/bulls_courtside-fleece-short.jpg",
         "descripcion": ""
     }
 ];
 
-export const obtainProducts = () => {
+export const obtainProducts = (categoriaId) => {
     return new Promise( resolve => {
         setTimeout(() => {
-            resolve(products);
-        }, 2000);
+            resolve(categoriaId ? products.filter((prod) => prod.categoriaId === categoriaId) : products);
+        }, 500);
     })
 }
 
-export const obtainDetail = () => {
+export const obtainDetail = (id) => {
     return new Promise( resolve => {
         setTimeout(() => {
-            resolve(products.find((prod) => prod.id === 5));
-        }, 1000);
+            resolve(products.find((prod) => prod.id === id));
+        }, 500);
+    })
+}
+
+export const obtainTipoId = (tipo) => {
+    return new Promise( resolve => {
+        setTimeout(() => {
+            resolve(products.filter((prod) => prod.tipoId === tipo));
+        }, 500);
     })
 }

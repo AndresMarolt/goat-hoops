@@ -1,33 +1,34 @@
 import NavBar from './components/NavBar/NavBar';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
-import { useState } from 'react';
-import ItemList from './components/ItemList/ItemList';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 
 const App = () => {
-
-  const [show, setShow] = useState('list');
   
   return (
     <>
-      <header className="App-header">
-          <div className="contenedor">
+      <BrowserRouter>
+        <header className="App-header">
             <NavBar />
-          </div>
-      </header>
+        </header>
 
-      <main>
-        <div className='contenedor'>
-          <div>
-            <button onClick={() => setShow('list')}>List</button>
-            <button onClick={() => setShow('detail')}>Detail</button>
+        <main>
+          <div className='contenedor'>
+            <div>
+              <Routes>
+                <Route path="/" element={<ItemListContainer />} />
+                <Route path="/categoria/:categoriaId" element={<ItemListContainer />} />
+                <Route path="/categoria/Camiseta/:tipoId" element={<ItemListContainer />} />
+                <Route path="/Item/:productId" element={<ItemDetailContainer />} />
+                <Route path="/nosotros"/>
+                <Route path="/contacto"/>
+                <Route path="*" element={<h1>404 NOT FOUND</h1>} />
+              </Routes>
+            </div>
           </div>
-          {show === 'list' ? <ItemListContainer /> : null}
-          {show === 'detail' ? <ItemDetailContainer /> : null}
-          {/* <ItemListContainer /> */}
-          {/* <ItemDetailContainer /> */}
-        </div>
-      </main>
+        </main>
+      </BrowserRouter>
     </>
   );
 }

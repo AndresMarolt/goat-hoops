@@ -2,7 +2,7 @@ $fuenteHeading:'Montserrat', sans-serif;
 $fuenteParrafos: 'Arimo', sans-serif;
 
 $sm-fontsize: 1.2rem;
-$md-size: 1.4rem;
+$md-fontsize: 1.4rem;
 $lg-fontsize: 1.6rem;
 
 $azul: #17408B;
@@ -60,13 +60,20 @@ $blanco: #ffffff;
     border-radius: 8px;
     border: none;
     justify-self: flex-end;
-    
+    text-align: center;    
+    text-decoration: none;
+    font-weight: bold;
+    font-size: $sm-fontsize;
+
+    &:hover {
+        color: white;
+    }
 }
 
 @media(min-width: 768px) {
     
     .Producto {
-        font-size: $md-size;
+        font-size: $md-fontsize;
         height: 25rem;
 
         &__img {
@@ -76,12 +83,16 @@ $blanco: #ffffff;
             }
         }
     }
+
+    .Btn-info {
+        font-size: $md-fontsize;
+    }
 }
 
 @media(min-width: 1024px) {
 
     .Producto {
-        font-size: $md-size;
+        font-size: $md-fontsize;
         padding: 2rem;
         height: 35rem;
 
@@ -90,6 +101,10 @@ $blanco: #ffffff;
                 width: 220px;
             }
         }
+    }
+
+    .Btn-info {
+        font-size: $lg-fontsize;
     }
     
 }

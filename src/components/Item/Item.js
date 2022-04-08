@@ -1,6 +1,7 @@
+import { Link } from 'react-router-dom';
 import './Item.css'
 
-const Item = ({equipo, jugador, tipo, precio, img}) => {
+const Item = ({id, equipo, jugador, tipoId, precio, img}) => {
     return(
         <div className="Producto">
             <div>
@@ -10,12 +11,12 @@ const Item = ({equipo, jugador, tipo, precio, img}) => {
 
                 <div className="Producto__comprar">
                     <p className="Producto__comprar-precio">{precio}</p>
-                    <p className="Producto__comprar-titulo">{equipo} - {jugador} [{tipo}]</p>
+                    <p className="Producto__comprar-titulo">{equipo} - {jugador} [{tipoId}]</p>
                 </div>
 
             </div>
-
-            <button className="Btn-info">Ver Más</button>
+            
+            <Link to={`/Item/${id}`} className="Btn-info">Ver Más</Link>
         </div>
     )
 }
