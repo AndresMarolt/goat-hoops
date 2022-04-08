@@ -34,6 +34,13 @@
   .Detalle__img {
     width: 35%;
   }
+  .Detalle__precio {
+    font-size: 2rem;
+  }
+  .Detalle__descripcion {
+    width: 75%;
+    margin: 1rem auto;
+  }
   .Detalle button {
     border: 1px solid #C9082A;
   }

@@ -1,8 +1,12 @@
 import NavBar from './components/NavBar/NavBar';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
+import { useState } from 'react';
+import ItemList from './components/ItemList/ItemList';
 
 const App = () => {
+
+  const [show, setShow] = useState('list');
   
   return (
     <>
@@ -14,8 +18,14 @@ const App = () => {
 
       <main>
         <div className='contenedor'>
-          <ItemDetailContainer />
-          <ItemListContainer />
+          <div>
+            <button onClick={() => setShow('list')}>List</button>
+            <button onClick={() => setShow('detail')}>Detail</button>
+          </div>
+          {show === 'list' ? <ItemListContainer /> : null}
+          {show === 'detail' ? <ItemDetailContainer /> : null}
+          {/* <ItemListContainer /> */}
+          {/* <ItemDetailContainer /> */}
         </div>
       </main>
     </>

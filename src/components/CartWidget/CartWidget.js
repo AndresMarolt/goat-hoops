@@ -6,11 +6,11 @@ import '../../../node_modules/bootstrap/dist/css/bootstrap.css'
 import '../../../node_modules/bootstrap/dist/js/bootstrap.js'
 
 
-const CartWidget = () => {
+const CartWidget = ({ammount}) => {
     return (
         <div className='carrito'>
             <FontAwesomeIcon icon={faCartShopping} className="carrito__icono"/>
-            <p className="carrito__cantidad">3</p>
+            <p className="carrito__cantidad">{ammount}</p>
         </div>
     )
 };

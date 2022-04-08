@@ -37,7 +37,7 @@ const NavBar = () => {
 
                 <a href='#' className='link'>Nosotros</a>
                 <a href='#' className='link'>Contacto</a>
-                <CartWidget />
+                <CartWidget ammount="2"/>
 
             </div>
 

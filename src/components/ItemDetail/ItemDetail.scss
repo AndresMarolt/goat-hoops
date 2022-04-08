@@ -48,6 +48,15 @@ $lg-fontsize: 1.6rem;
             width: 35%;
         }
 
+        &__precio {
+            font-size: 2rem;
+        }
+
+        &__descripcion {
+            width: 75%;
+            margin: 1rem auto;
+        }
+
         button {
             border: 1px solid $rojo;
             &:hover {
