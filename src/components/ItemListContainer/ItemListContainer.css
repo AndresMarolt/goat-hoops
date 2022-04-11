@@ -3,23 +3,30 @@
   font-weight: bold;
   margin-top: 3rem;
   text-align: center;
-  color: rgb(117, 117, 117);
+  color: #757575;
 }
 
 .ItemListContainer .banner {
   width: 100%;
   padding: 5rem 0 8rem 0;
 }
+
 .ItemListContainer .Items-title {
   font-family: "Montserrat", sans-serif;
   text-align: center;
+  display: -ms-grid;
   display: grid;
-  align-items: center;
-  grid-template-columns: 1fr -webkit-max-content 1fr;
-  grid-template-columns: 1fr max-content 1fr;
-  grid-template-rows: 27px 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-grid-columns: 1fr max-content 1fr;
+      grid-template-columns: 1fr -webkit-max-content 1fr;
+      grid-template-columns: 1fr max-content 1fr;
+  -ms-grid-rows: 27px 0;
+      grid-template-rows: 27px 0;
   grid-gap: 20px;
 }
+
 .ItemListContainer .Items-title:after, .ItemListContainer .Items-title:before {
   content: "";
   display: block;
@@ -27,11 +34,14 @@
   border-top: 2px solid black;
   height: 8px;
 }
+
 .ItemListContainer .Items-title h1 {
   font-size: 4rem;
   text-transform: uppercase;
 }
+
 .ItemListContainer .Items-title span {
   font-weight: bold;
   text-transform: uppercase;
-}/*# sourceMappingURL=ItemListContainer.css.map */
+}
+/*# sourceMappingURL=ItemListContainer.css.map */

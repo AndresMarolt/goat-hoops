@@ -66,10 +66,8 @@ nav {
                     border-bottom: 1px solid rgb(220, 220, 220);
                 }
             }
-
         }
         
-
         .link {
             font-weight: bold;
             background-color: unset;
@@ -81,6 +79,19 @@ nav {
         }
     }
 }
+
+.btn-group.dropdown:active {
+    display: block;
+    
+}
+
+#ul1 .dropend:active > #ul2.dropdown-menu {
+    display: block !important;
+    margin-left: 9.3rem;
+    margin-top: -3rem;
+}
+
+
 
 @media(min-width: 768px) {
     button.btn {
@@ -138,7 +149,14 @@ nav {
             }
         }
     }
+
+    #ul1 .dropend:hover > #ul2.dropdown-menu {
+        display: block;
+        margin-left: 10.3rem;
+        margin-top: -3rem;
+    }
         
+    
 }
 
 

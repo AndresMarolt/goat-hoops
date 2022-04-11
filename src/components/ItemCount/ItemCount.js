@@ -19,6 +19,7 @@ const ItemCount = ({stock, initial, onAdd}) => {
 
     return(
         <div className='agregar__carrito'>
+            <p>Stock: {stock}</p>
             <div className='agregar__carrito-controles'>
                 <button type='button' onClick={decrement}>-</button>
                 <p>{counterState.count}</p>

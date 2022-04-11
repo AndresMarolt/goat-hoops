@@ -32,9 +32,7 @@ const ItemListContainer = () => {
         }
     }, [categoriaId, tipoId])
 
-    const onAddFunction = (quantity) => {
-        quantity>1 ? alert(`Se agregaron ${quantity} productos al carrito exitosamente`) : alert(`Se agregó ${quantity} producto al carrito exitosamente`);
-    }
+    
 
     return (
         <div className="ItemListContainer">

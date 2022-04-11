@@ -12,16 +12,16 @@ const NavBar = () => {
 
             <div className="nav__bar">
                 <div className="btn-group dropdown">
-                    <button className="btn btn-secondary dropdown-toggle link" type="button" id="dropdownMenuClickableInside" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+                    <button className="btn btn-secondary dropdown-toggle link" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
                         Productos
                     </button>
-                    <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton" id="ul1">
                         <li>
                             <div className="btn-group dropend">
                                 <button className="btn btn-secondary dropdown-toggle link btn-submenu" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
                                     Camisetas
                                 </button>
-                                <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+                                <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton2" id="ul2">
                                     <li><Link to={'/categoria/camisetas/icon'} className="dropdown-item">Icon</Link></li>
                                     <li><Link to={'/categoria/camisetas/association'} className="dropdown-item">Association</Link></li>
                                     <li><Link to={'/categoria/camisetas/city-edition'} className="dropdown-item">City Edition</Link></li>

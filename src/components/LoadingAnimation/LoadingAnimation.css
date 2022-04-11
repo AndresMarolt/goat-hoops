@@ -1,0 +1,83 @@
+@-webkit-keyframes pulse {
+  0% {
+    opacity: .1;
+  }
+  20% {
+    opacity: .8;
+  }
+  100% {
+    opacity: .1;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    opacity: .1;
+  }
+  20% {
+    opacity: .8;
+  }
+  100% {
+    opacity: .1;
+  }
+}
+
+.Svg-container {
+  width: 15%;
+  margin: 15rem auto;
+}
+
+.svg {
+  width: 100%;
+}
+
+.svg path {
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-name: pulse;
+          animation-name: pulse;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  color: #000;
+}
+
+.bb-7 {
+  -webkit-animation-delay: -1s;
+          animation-delay: -1s;
+}
+
+.bb-6 {
+  -webkit-animation-delay: -.875s;
+          animation-delay: -.875s;
+}
+
+.bb-5 {
+  -webkit-animation-delay: -.75s;
+          animation-delay: -.75s;
+}
+
+.bb-4 {
+  -webkit-animation-delay: -.625s;
+          animation-delay: -.625s;
+}
+
+.bb-3 {
+  -webkit-animation-delay: -.5s;
+          animation-delay: -.5s;
+}
+
+.bb-2 {
+  -webkit-animation-delay: -.375s;
+          animation-delay: -.375s;
+}
+
+.bb-1 {
+  -webkit-animation-delay: -.25s;
+          animation-delay: -.25s;
+}
+
+.bb-0 {
+  -webkit-animation-delay: -.125s;
+          animation-delay: -.125s;
+}
+/*# sourceMappingURL=LoadingAnimation.css.map */
