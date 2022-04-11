@@ -3,6 +3,35 @@
   font-weight: bold;
   margin-top: 3rem;
   text-align: center;
-  color: #757575;
+  color: rgb(117, 117, 117);
 }
-/*# sourceMappingURL=ItemListContainer.css.map */
+
+.ItemListContainer .banner {
+  width: 100%;
+  padding: 5rem 0 8rem 0;
+}
+.ItemListContainer .Items-title {
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr -webkit-max-content 1fr;
+  grid-template-columns: 1fr max-content 1fr;
+  grid-template-rows: 27px 0;
+  grid-gap: 20px;
+}
+.ItemListContainer .Items-title:after, .ItemListContainer .Items-title:before {
+  content: "";
+  display: block;
+  border-bottom: 2px solid black;
+  border-top: 2px solid black;
+  height: 8px;
+}
+.ItemListContainer .Items-title h1 {
+  font-size: 4rem;
+  text-transform: uppercase;
+}
+.ItemListContainer .Items-title span {
+  font-weight: bold;
+  text-transform: uppercase;
+}/*# sourceMappingURL=ItemListContainer.css.map */

@@ -42,10 +42,10 @@ $lg-fontsize: 1.6rem;
 @media(min-width: 1024px) {
     .Detalle {
         font-size: $md-size;
-        width: 75%;
+        width: 50%;
         margin: 5rem auto;
         &__img {
-            width: 35%;
+            width: 50%;
         }
 
         &__precio {

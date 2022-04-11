@@ -1,22 +1,15 @@
 .carrito {
   color: white;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  align-items: flex-start;
   justify-items: center;
-  gap: .5rem;
+  gap: 0.5rem;
   font-size: 1.4rem;
 }
-
 .carrito__icono {
-  -ms-flex-item-align: start;
-      align-self: flex-start;
+  align-self: flex-start;
   margin-top: 3px;
 }
-
 .carrito__cantidad {
   margin: 0;
 }
@@ -25,5 +18,4 @@
   .carrito {
     font-size: 1.6rem;
   }
-}
-/*# sourceMappingURL=CartWidget.css.map */
+}/*# sourceMappingURL=CartWidget.css.map */

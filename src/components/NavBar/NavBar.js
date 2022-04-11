@@ -8,7 +8,7 @@ const NavBar = () => {
 
     return (
         <nav className='contenedor'>
-            <Link to={'./'} className='enlace-logo'><img src="../img/logo.png" className="logo" alt="goat-hoops-logo"/></Link>
+            <Link to={'/'} className='enlace-logo'><img src="../img/logo.png" className="logo" alt="goat-hoops-logo"/></Link>
 
             <div className="nav__bar">
                 <div className="btn-group dropdown">
@@ -22,16 +22,16 @@ const NavBar = () => {
                                     Camisetas
                                 </button>
                                 <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton2">
-                                    <li><Link to={'/categoria/Camiseta/icon'} className="dropdown-item">Icon</Link></li>
-                                    <li><Link to={'/categoria/Camiseta/association'} className="dropdown-item">Association</Link></li>
-                                    <li><Link to={'/categoria/Camiseta/city-edition'} className="dropdown-item">City Edition</Link></li>
-                                    <li><Link to={'/categoria/Camiseta/throwback'} className="dropdown-item">Throwback</Link></li>
+                                    <li><Link to={'/categoria/camisetas/icon'} className="dropdown-item">Icon</Link></li>
+                                    <li><Link to={'/categoria/camisetas/association'} className="dropdown-item">Association</Link></li>
+                                    <li><Link to={'/categoria/camisetas/city-edition'} className="dropdown-item">City Edition</Link></li>
+                                    <li><Link to={'/categoria/camisetas/hardwood-classics'} className="dropdown-item">Hardwood Classics</Link></li>
                                 </ul>
                             </div>
                         </li>
-                        <li><Link to={'/categoria/Remera'} className='dropdown-item'>Remeras</Link></li>
-                        <li><Link to={'/categoria/Short'} className='dropdown-item'>Shorts</Link></li>
-                        <li><Link to={'/categoria/Buzo'} className='dropdown-item'>Buzos</Link></li>
+                        <li><Link to={'/categoria/remeras'} className='dropdown-item'>Remeras</Link></li>
+                        <li><Link to={'/categoria/shorts'} className='dropdown-item'>Shorts</Link></li>
+                        <li><Link to={'/categoria/buzos'} className='dropdown-item'>Buzos</Link></li>
                     </ul>
                 </div>
 
