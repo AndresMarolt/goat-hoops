@@ -19,7 +19,6 @@ const ItemListContainer = () => {
             })
     }, [categoriaId])
 
-    
     useEffect(() => {
         obtainTipoId(tipoId)
             .then(prods => {
