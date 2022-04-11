@@ -1,0 +1,12 @@
+$sm-fontsize: 1.4rem;
+$lg-fontsize: 1.6rem;
+
+$fuenteHeading:'Montserrat', sans-serif;
+$fuenteParrafos: 'Arimo', sans-serif;
+
+.Footer__texto {
+    margin: 0;
+    padding: 2rem 0;
+    font-size: $lg-fontsize;
+    font-family: $fuenteParrafos;
+}
