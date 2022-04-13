@@ -52,7 +52,7 @@ $lg-fontsize: 1.6rem;
                 grid-column: 1 / 3;
             }
             &__img {
-                width: 100%;
+                width: 60%;
                 margin: 0 auto;
             }
     
@@ -65,6 +65,7 @@ $lg-fontsize: 1.6rem;
                 margin: 1rem auto;
                 grid-row: 2 / 3;
                 grid-column: 2 / 3;
+                font-size: $lg-fontsize;
             }
 
             .Item-count {

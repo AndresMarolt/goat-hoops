@@ -7,8 +7,6 @@ const ItemDetail = ({nombre, img, precio, descripcion}) => {
         quantity>1 ? alert(`Se agregaron ${quantity} productos al carrito exitosamente`) : alert(`Se agregó ${quantity} producto al carrito exitosamente`);
     }
 
-
-
     return(
         <section className="Detalle">
                 <h1 className="Detalle__titulo">{nombre}</h1>
