@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom'
 const NavBar = () => {
 
     return (
-        <nav>
+        <nav className='contenedor'>
             <Link to={'/'} className='enlace-logo'><img src="../img/logo.png" className="logo" alt="goat-hoops-logo"/></Link>
 
             <div className="nav__bar">
