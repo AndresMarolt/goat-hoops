@@ -15,11 +15,11 @@ $lg-fontsize: 1.6rem;
 .ItemListContainer {
     #carousel {
         width: 100%;
-        padding: 5rem 0 8rem 0;
-        height: 100%;
+        margin: 5rem 0 5rem 0;
+        height: 10rem;
 
         img {
-            height: 15rem;
+            height: 10rem;
         }
     }
 
@@ -42,8 +42,9 @@ $lg-fontsize: 1.6rem;
 @media(min-width: 768px) {
     .ItemListContainer {
         #carousel {
+            height: 20rem;
             img {
-                height: 25rem;
+                height: 20rem;
             }
         }
 
@@ -72,8 +73,9 @@ $lg-fontsize: 1.6rem;
 @media(min-width: 1024px) {
     .ItemListContainer {
         #carousel {
+            height: 35rem;
             img {
-                height: 40rem;
+                height: 35rem;
             }
         }
 

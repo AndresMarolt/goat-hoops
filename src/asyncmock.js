@@ -37,18 +37,6 @@ const products = [
     }, */
     {
         "id": "4",
-        "categoriaId": "camisetas",
-        "tipoId": "association",
-        "equipo": "Cleveland Cavaliers",
-        "jugador": "Darius Garland",
-        "precio": "$8500",
-        "stock": 3,
-        "img": "/img/Cleveland/camisetas/garland1.webp",
-        "nombre": "Camiseta Cleveland Cavaliers - Darius Garland (Association)",
-        "descripcion": "Elige una imagen diferente, pero no menos auténtica. Esta camiseta tiene un diseño y una calidad de fabricación excepcionales para ofrecer lo último en ropa de baloncesto."
-    },
-    {
-        "id": "5",
         "categoriaIdId": "camisetas",
         "tipoId": "icon",
         "equipo": "Cleveland Cavaliers",
@@ -57,6 +45,18 @@ const products = [
         "stock": 7,
         "img": "/img/Cleveland/camisetas/garland.webp",
         "nombre": "Camiseta Cleveland Cavaliers - Darius Garland (Icon)",
+        "descripcion": "Elige una imagen diferente, pero no menos auténtica. Esta camiseta tiene un diseño y una calidad de fabricación excepcionales para ofrecer lo último en ropa de baloncesto."
+    },
+    {
+        "id": "5",
+        "categoriaId": "camisetas",
+        "tipoId": "association",
+        "equipo": "Cleveland Cavaliers",
+        "jugador": "Darius Garland",
+        "precio": "$8500",
+        "stock": 3,
+        "img": "/img/Cleveland/camisetas/garland1.webp",
+        "nombre": "Camiseta Cleveland Cavaliers - Darius Garland (Association)",
         "descripcion": "Elige una imagen diferente, pero no menos auténtica. Esta camiseta tiene un diseño y una calidad de fabricación excepcionales para ofrecer lo último en ropa de baloncesto."
     },
     {
