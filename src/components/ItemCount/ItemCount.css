@@ -2,7 +2,7 @@
   font-family: "Arimo", sans-serif;
   font-weight: bold;
   font-size: 1.2rem;
-  width: 45%;
+  width: 100%;
   margin: 5rem auto 0 auto;
   display: flex;
   flex-direction: column;
@@ -34,7 +34,7 @@ button {
 
 @media (min-width: 1024px) {
   .agregar__carrito {
-    width: 50%;
+    width: 100%;
   }
   .agregar__carrito-boton {
     border: 1px solid #C9082A;

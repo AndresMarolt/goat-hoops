@@ -4,6 +4,7 @@ import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailCont
 import AboutUs from './components/AboutUs/AboutUs';
 import Contact from './components/Contact/Contact';
 import Footer from './components/Footer/Footer';
+import Cart from './components/Cart/Cart';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 const App = () => {
@@ -27,17 +28,18 @@ const App = () => {
                 <Route path="/item/:productId" element={<ItemDetailContainer />} />
                 <Route path="/nosotros" element={<AboutUs/>} />
                 <Route path="/contacto" element={<Contact />} />
+                <Route path="/cart" element={<Cart />} />
                 <Route path="*" element={<h1>404 NOT FOUND</h1>} />
               </Routes>
           </div>
         </main>
+      </BrowserRouter>
 
         <footer>
           <div className='contenedor'>
             <Footer />
           </div>
         </footer>
-      </BrowserRouter>
     </>
   );
 }

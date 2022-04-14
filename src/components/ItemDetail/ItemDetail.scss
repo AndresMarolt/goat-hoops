@@ -15,9 +15,10 @@ $lg-fontsize: 1.6rem;
         width: 100%;
         text-align: center;
         background: white;
-        padding: 1rem 2rem;
+        padding: 2rem;
         font-family: $fuenteParrafos;
         margin-top: 5rem;
+        margin-bottom: 5rem;
         box-shadow: 2px 2px 2px rgb(218, 218, 218);
         font-size: $sm-fontsize;
 
@@ -33,9 +34,28 @@ $lg-fontsize: 1.6rem;
             font-size: $sm-fontsize + 0.5;
             margin-top: 1rem;
         }
+
+        #div {
+            width: 50%;
+            margin: 0 auto;
+            
+            .link-carrito {
+                text-decoration: none;
+                color: white;
+                padding: 1rem;
+                margin-top: 20rem;
+    
+                &_texto {
+                    font-weight: bold;
+                    padding: .5rem 0;
+                    background-color: #c94059;
+                }
+            }
+        }
+
     }
 
-@media(min-width: 1024px) {
+@media(min-width: 768px) {
         .Detalle {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -71,6 +91,10 @@ $lg-fontsize: 1.6rem;
             .Item-count {
                 grid-row: 2 / 3;
                 grid-column: 2 / 3;
+            }
+
+            #div {
+                width: 33%;
             }
         }
     }

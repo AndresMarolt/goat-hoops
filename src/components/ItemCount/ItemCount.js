@@ -3,18 +3,23 @@ import './ItemCount.css'
 
 const ItemCount = ({stock, initial, onAdd}) => {
 
+    const [counter, setCounter] = useState(initial);
+
+    /* 
     const [counterState, setCounter] = useState({count: initial});
 
     const decrement = () => {
-        if(counterState.count > 1) {
-            setCounter({...counterState, count: counterState.count - 1})
+        if(counter > 1) {
+            setCounter({...counterState, count: counter - 1})        Así se haría si quisiera almacenar más de un elemento en el mismo State
         }
+    } */
+
+    const decrement = () => {
+        if(counter > 1) setCounter(counter - 1);
     }
 
     const increment = () => {
-        if(counterState.count < stock) {
-            setCounter({...counterState, count: counterState.count + 1})
-        }
+        if(counter < stock) setCounter(counter + 1);
     }
 
     return(
@@ -22,11 +27,11 @@ const ItemCount = ({stock, initial, onAdd}) => {
             <p>Stock: {stock}</p>
             <div className='agregar__carrito-controles'>
                 <button type='button' onClick={decrement}>-</button>
-                <p>{counterState.count}</p>
+                <p>{counter}</p>
                 <button type='button' onClick={increment}>+</button>
             </div>
             
-            <button type='button' className='agregar__carrito-boton' onClick={ () => onAdd(counterState.count)}>Agregar al Carrito</button>
+            <button type='button' className='agregar__carrito-boton' onClick={ () => onAdd(counter)}>Agregar al Carrito</button>
 
         </div>
     )
