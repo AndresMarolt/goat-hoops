@@ -6,11 +6,10 @@ const CartContext = createContext();
 
 export const CartContextProvider = ({ children }) => {
     
-    const [cart, setCart] = useState(JSON.parse(localStorage.getItem('cart')) || []);
-    
+    const [cart, setCart] = useState(JSON.parse(localStorage.getItem('carrito')) || [] );
+
     const addItem = (item, quantity) => {
         setCart([...cart, {...item, quantity}]);
-        localStorage.setItem('cart', JSON.stringify(cart));
     }
 
     const getQuantity = () => {
@@ -18,6 +17,7 @@ export const CartContextProvider = ({ children }) => {
         cart.forEach(prod => {
             count += prod.quantity;
         })
+        localStorage.setItem('carrito', JSON.stringify(cart));
 
         return count;
     }
@@ -25,13 +25,11 @@ export const CartContextProvider = ({ children }) => {
     const removeItem = (itemId) => {
         const products = cart.filter(prod => prod.id !== itemId);
         setCart(products);
-        localStorage.setItem('cart', JSON.stringify(cart));
     }
 
     const clearCart = () => {
         const emptyCart = [];
         setCart(emptyCart);
-        localStorage.setItem('cart', JSON.stringify(cart));
     }
 
     const isInCart = (itemId) => {

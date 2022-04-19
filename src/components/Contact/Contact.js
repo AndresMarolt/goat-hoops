@@ -7,15 +7,15 @@ const Contact = () => {
 
             <form className='Contacto_form'>
                 <div className='Campo'>
-                    <label for="nombre">Nombre</label>
+                    <label htmlFor="nombre">Nombre</label>
                     <input type="text" id="nombre" placeholder='Nombre'/>
                 </div>
                 <div className='Campo'>
-                    <label for="email">Email</label>
+                    <label htmlFor="email">Email</label>
                     <input type="email" id="email" placeholder='Email'/>
                 </div>
                 <div className='Campo'>
-                    <label for="asunto">Asunto</label>
+                    <label htmlFor="asunto">Asunto</label>
                     <select id="asunto">
                         <option value="0">--Elija una opción--</option>
                         <option value="1">Consulta por stock</option>
@@ -25,7 +25,7 @@ const Contact = () => {
                     </select>
                 </div>
                 <div className='Campo'>
-                    <label for="message">Mensaje</label>
+                    <label htmlFor="message">Mensaje</label>
                     <textarea id="message" placeholder='Mensaje'></textarea>
                 </div>
 

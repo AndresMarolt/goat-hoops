@@ -7,19 +7,17 @@ import Cart from '../Cart/Cart';
 
 const ItemDetail = ({id, nombre, img, precio, descripcion, stock}) => {
 
-    const [quantity, setQuantity] = useState(0);
-    const {cart, addItem, isInCart} = useContext(CartContext);
+    const {addItem, isInCart, cart} = useContext(CartContext);
 
     const onAddFunction = (count) => {
-        setQuantity(count);
 
         const productObj = {
             id, nombre, precio
         }
 
         addItem(productObj, count);
-        console.log(cart);
     }
+    
 
     return(
         <section className="Detalle">
