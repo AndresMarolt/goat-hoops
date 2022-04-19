@@ -1,14 +1,24 @@
 import ItemCount from '../ItemCount/ItemCount';
 import './ItemDetail.css'
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
+import CartContext from '../../context/CartContext';
+import Cart from '../Cart/Cart';
 
-const ItemDetail = ({nombre, img, precio, descripcion, stock}) => {
+const ItemDetail = ({id, nombre, img, precio, descripcion, stock}) => {
 
     const [quantity, setQuantity] = useState(0);
+    const {cart, addItem, isInCart} = useContext(CartContext);
 
     const onAddFunction = (count) => {
         setQuantity(count);
+
+        const productObj = {
+            id, nombre, precio
+        }
+
+        addItem(productObj, count);
+        console.log(cart);
     }
 
     return(
@@ -19,7 +29,7 @@ const ItemDetail = ({nombre, img, precio, descripcion, stock}) => {
                     <p className="Detalle__precio">{precio}</p>
                     <p className="Detalle__descripcion">{descripcion}</p>
                     <div id="div">
-                        {quantity > 0 ? <Link to='/cart' className='link-carrito'><p className='link-carrito_texto'>Ir al Carrito</p></Link> : <ItemCount className="Item-count" stock={stock} initial={1} onAdd={onAddFunction} />} 
+                        {isInCart(id) > 0 ? <Link to='/cart' className='link-carrito'><p className='link-carrito_texto'>Ir al Carrito</p></Link> : <ItemCount className="Item-count" stock={stock} initial={1} onAdd={onAddFunction} />} 
                     </div>
                 </div>
 

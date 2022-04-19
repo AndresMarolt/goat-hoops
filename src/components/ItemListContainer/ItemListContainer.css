@@ -55,10 +55,10 @@
 }
 @media (min-width: 1024px) {
   .ItemListContainer #carousel {
-    height: 35rem;
+    height: 25rem;
   }
   .ItemListContainer #carousel img {
-    height: 35rem;
+    height: 25rem;
   }
   .ItemListContainer .Items-title h1 {
     font-size: 4rem;
