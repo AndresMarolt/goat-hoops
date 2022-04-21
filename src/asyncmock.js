@@ -105,7 +105,7 @@ const products = [
         "precio": "$8500",
         "stock": 7,
         "img": "/img/Los Angeles (Lakers)/camisetas/lebron.webp",
-        "nombre": "Camiseta Los Angeles - LeBron James (City Edition)",
+        "nombre": "Camiseta Los Angeles Lakers - LeBron James (City Edition)",
         "descripcion": "Consigue una emblemática prenda de la NBA de gran calidad. Con una confección de gran calidad y un diseño que es una réplica exacta tendrás una imagen igual que la real."
     },
     {
