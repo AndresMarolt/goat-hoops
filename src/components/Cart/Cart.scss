@@ -1,0 +1,39 @@
+$fuenteHeading:'Montserrat', sans-serif;
+$fuenteParrafos: 'Arimo', sans-serif;
+
+$sm-fontsize: 1.4rem;
+$lg-fontsize: 1.6rem;
+
+$azul: #17408B;
+$blanco: #ffffff;
+$rojo: #C9082A;
+$blanco: #ffffff;
+
+
+.Cart {
+    margin-top: 3rem;
+
+    &_title {
+        text-transform: uppercase;
+        font-family: $fuenteHeading;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    &_list {
+        list-style-type: none;
+        background-color: white;
+        box-shadow: 2px 2px 2px rgb(218, 218, 218);
+        padding: .5rem;
+
+    }
+}
+
+
+@media(min-width: 768px) {
+
+}
+
+@media(min-width: 1024px) {
+    
+}

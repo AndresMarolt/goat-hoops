@@ -1,13 +1,23 @@
 import ItemCount from '../ItemCount/ItemCount';
 import './ItemDetail.css'
+import { useContext, useState } from 'react';
+import { Link } from 'react-router-dom';
+import CartContext from '../../context/CartContext';
+import Cart from '../Cart/Cart';
 
-const ItemDetail = ({nombre, img, precio, descripcion}) => {
+const ItemDetail = ({id, nombre, img, precio, descripcion, stock}) => {
 
-    const onAddFunction = (quantity) => {
-        quantity>1 ? alert(`Se agregaron ${quantity} productos al carrito exitosamente`) : alert(`Se agregó ${quantity} producto al carrito exitosamente`);
+    const {addItem, isInCart, cart} = useContext(CartContext);
+
+    const onAddFunction = (count) => {
+
+        const productObj = {
+            id, nombre, precio, img
+        }
+
+        addItem(productObj, count);
     }
-
-
+    
 
     return(
         <section className="Detalle">
@@ -16,7 +26,9 @@ const ItemDetail = ({nombre, img, precio, descripcion}) => {
                 <div>
                     <p className="Detalle__precio">{precio}</p>
                     <p className="Detalle__descripcion">{descripcion}</p>
-                    <ItemCount className="Item-count" stock={5} initial={0} onAdd={onAddFunction} />
+                    <div id="div">
+                        {isInCart(id) > 0 ? <Link to='/cart' className='link-carrito'><p className='link-carrito_texto'>Ir al Carrito</p></Link> : <ItemCount className="Item-count" stock={stock} initial={1} onAdd={onAddFunction} />} 
+                    </div>
                 </div>
 
         </section>

@@ -1,41 +1,47 @@
 import NavBar from './components/NavBar/NavBar';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
+import AboutUs from './components/AboutUs/AboutUs';
+import Contact from './components/Contact/Contact';
 import Footer from './components/Footer/Footer';
+import Cart from './components/Cart/Cart';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { CartContextProvider } from './context/CartContext';
 
 const App = () => {
   
   return (
     <>
-      <BrowserRouter>
-        <header className="App-header">
-            <NavBar />
-        </header>
+      <CartContextProvider>
+        <BrowserRouter>
+          <header className="App-header">
+              <NavBar />
+          </header>
 
-        <main>
-          <div className='contenedor'>
-              <Routes>
-                <Route path="/" element={<ItemListContainer />} />
+          <main>
+            <div className='contenedor'>
+                <Routes>
+                  <Route path="/" element={<ItemListContainer />} />
 
-                <Route path="/categoria/:categoriaId/" element={<ItemListContainer />}>
-                  <Route path=":tipoId" element={<ItemListContainer />} />
-                </Route>
+                  <Route path="/categoria/:categoriaId/" element={<ItemListContainer />}>
+                    <Route path=":tipoId" element={<ItemListContainer />} />
+                  </Route>
 
-                <Route path="/item/:productId" element={<ItemDetailContainer />} />
-                <Route path="/nosotros"/>
-                <Route path="/contacto"/>
-                <Route path="*" element={<h1>404 NOT FOUND</h1>} />
-              </Routes>
-          </div>
-        </main>
-
+                  <Route path="/item/:productId" element={<ItemDetailContainer />} />
+                  <Route path="/nosotros" element={<AboutUs/>} />
+                  <Route path="/contacto" element={<Contact />} />
+                  <Route path="/cart" element={<Cart />} />
+                  <Route path="*" element={<h1>404 NOT FOUND</h1>} />
+                </Routes>
+            </div>
+          </main>
+        </BrowserRouter>
         <footer>
           <div className='contenedor'>
             <Footer />
           </div>
         </footer>
-      </BrowserRouter>
+      </CartContextProvider>
     </>
   );
 }

@@ -1,0 +1,63 @@
+.Contacto {
+  margin: 5rem 0;
+}
+.Contacto_title {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+}
+.Contacto_form {
+  background-color: white;
+  padding: 2rem 0;
+  box-shadow: 2px 2px 2px rgb(218, 218, 218);
+  display: grid;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.2rem;
+  background-color: rgb(233, 233, 233);
+  width: 75%;
+  margin: 0 auto;
+  margin-top: 2rem;
+}
+.Contacto_form .Campo {
+  display: flex;
+  gap: 3rem;
+  padding: 0.5rem;
+  align-items: center;
+}
+.Contacto_form .Campo label {
+  font-weight: bold;
+  text-align: center;
+  width: 30%;
+}
+.Contacto_form .Campo input, .Contacto_form .Campo select, .Contacto_form .Campo textarea {
+  width: 70%;
+  border: none;
+  border-radius: 5px;
+}
+.Contacto_form button {
+  margin: 0 auto;
+  margin-top: 1rem;
+  padding: 0.75rem;
+  width: 50%;
+}
+
+@media (min-width: 768px) {
+  .Contacto_form {
+    margin-top: 2rem;
+    font-size: 1.4rem;
+    padding: 2rem;
+  }
+}
+@media (min-width: 1024px) {
+  .Contacto {
+    margin: 10rem 0;
+  }
+  .Contacto_title {
+    font-size: 3rem;
+  }
+  .Contacto_form {
+    width: 40%;
+    font-size: 1.6rem;
+  }
+}/*# sourceMappingURL=Contact.css.map */

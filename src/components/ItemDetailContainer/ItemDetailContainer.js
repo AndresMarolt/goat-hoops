@@ -24,8 +24,12 @@ const ItemDetailContainer = () => {
 
     return(
         <>
-            {loading ? <LoadingAnimation /> : 
-            product ? <ItemDetail key={product.id} {...product} /> : <h1>El producto no existe</h1>}
+            {loading ? 
+                <LoadingAnimation /> : 
+            product ? 
+                <ItemDetail key={product.id} {...product} /> : 
+                
+                <h1>El producto no existe</h1>}
         </>
     )
 }

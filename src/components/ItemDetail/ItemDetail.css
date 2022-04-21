@@ -2,40 +2,46 @@
   width: 100%;
   text-align: center;
   background: white;
-  padding: 1rem 2rem;
+  padding: 2rem;
   font-family: "Arimo", sans-serif;
   margin-top: 5rem;
-  -webkit-box-shadow: 2px 2px 2px #dadada;
-          box-shadow: 2px 2px 2px #dadada;
+  margin-bottom: 5rem;
+  box-shadow: 2px 2px 2px rgb(218, 218, 218);
   font-size: 1.2rem;
 }
-
 .Detalle__titulo {
   font-family: "Montserrat", sans-serif;
 }
-
 .Detalle__img {
   width: 50%;
 }
-
 .Detalle__precio {
   font-weight: bold;
   font-size: 1.7rem;
   margin-top: 1rem;
 }
+.Detalle #div {
+  width: 50%;
+  margin: 0 auto;
+}
+.Detalle #div .link-carrito {
+  text-decoration: none;
+  color: white;
+  padding: 1rem;
+  margin-top: 20rem;
+}
+.Detalle #div .link-carrito_texto {
+  font-weight: bold;
+  padding: 0.5rem 0;
+  background-color: #c94059;
+}
 
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   .Detalle {
-    display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
     font-size: 1.4rem;
     width: 100%;
     margin: 5rem auto;
@@ -44,12 +50,10 @@
   .Detalle__titulo {
     font-weight: bold;
     margin-bottom: 5rem;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 2;
-    grid-column: 1 / 3;
+    grid-column: 1/3;
   }
   .Detalle__img {
-    width: 100%;
+    width: 60%;
     margin: 0 auto;
   }
   .Detalle__precio {
@@ -58,20 +62,15 @@
   .Detalle__descripcion {
     width: 100%;
     margin: 1rem auto;
-    -ms-grid-row: 2;
-    -ms-grid-row-span: 1;
-    grid-row: 2 / 3;
-    -ms-grid-column: 2;
-    -ms-grid-column-span: 1;
-    grid-column: 2 / 3;
+    grid-row: 2/3;
+    grid-column: 2/3;
+    font-size: 1.6rem;
   }
   .Detalle .Item-count {
-    -ms-grid-row: 2;
-    -ms-grid-row-span: 1;
-    grid-row: 2 / 3;
-    -ms-grid-column: 2;
-    -ms-grid-column-span: 1;
-    grid-column: 2 / 3;
+    grid-row: 2/3;
+    grid-column: 2/3;
   }
-}
-/*# sourceMappingURL=ItemDetail.css.map */
+  .Detalle #div {
+    width: 33%;
+  }
+}/*# sourceMappingURL=ItemDetail.css.map */

@@ -7,7 +7,6 @@ $fuenteParrafos: 'Arimo', sans-serif;
     margin-bottom: 10rem;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(9, 1fr);
     align-items: center;
     justify-content: center;
     gap: 1rem;
@@ -17,7 +16,6 @@ $fuenteParrafos: 'Arimo', sans-serif;
 @media(min-width: 768px) {
     .Productos-todo {
         grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(6, 1fr);   
     }
 }
 

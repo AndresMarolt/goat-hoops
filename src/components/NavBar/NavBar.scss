@@ -4,7 +4,8 @@ $fuenteParrafos: 'Arimo', sans-serif;
 $sm-fontsize: 1.4rem;
 $lg-fontsize: 1.6rem;
 
-
+$azul: #17408B;
+$rojo: #C9082A;
 
 button.btn {
     font-size: 1.4rem;
@@ -25,6 +26,10 @@ nav {
         .logo {
             width: 100%;
         }
+    }
+
+    .search-bar {
+        display: none;
     }
 
     .nav__bar {
@@ -66,8 +71,9 @@ nav {
                     border-bottom: 1px solid rgb(220, 220, 220);
                 }
             }
+
         }
-        
+
         .link {
             font-weight: bold;
             background-color: unset;
@@ -79,19 +85,6 @@ nav {
         }
     }
 }
-
-.btn-group.dropdown:active {
-    display: block;
-    
-}
-
-#ul1 .dropend:active > #ul2.dropdown-menu {
-    display: block !important;
-    margin-left: 9.3rem;
-    margin-top: -3rem;
-}
-
-
 
 @media(min-width: 768px) {
     button.btn {
@@ -119,6 +112,7 @@ nav {
                 }
 
                 .dropdown-menu {
+                    position: relative;
                     .dropdown-item {
                         font-size: $lg-fontsize;
                     }
@@ -131,7 +125,35 @@ nav {
 @media(min-width: 1024px) {
     nav {
         .enlace-logo {
-            width: 10%;
+            width: 11%;
+        }
+
+        .search-bar {
+            width: 30%;
+            margin: 0 auto;
+            text-align: center;
+            border-radius: 10px;
+            background-color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+    
+    
+            &_lupa {
+                width: 10%;
+                color: $azul;
+            }
+    
+            &_barra {
+                width: 90%;
+                border: none;
+                padding: .4rem;
+                border-radius: 10px;
+    
+                &:focus {
+                    outline: none;
+                }
+            }
         }
 
         .nav__bar {
@@ -149,15 +171,5 @@ nav {
             }
         }
     }
-
-    #ul1 .dropend:hover > #ul2.dropdown-menu {
-        display: block;
-        margin-left: 10.3rem;
-        margin-top: -3rem;
-    }
         
-    
 }
-
-
-
