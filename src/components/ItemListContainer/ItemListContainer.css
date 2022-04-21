@@ -3,7 +3,7 @@
   font-weight: bold;
   margin-top: 3rem;
   text-align: center;
-  color: rgb(117, 117, 117);
+  color: #757575;
 }
 
 .ItemListContainer #carousel {
@@ -11,17 +11,21 @@
   margin: 5rem 0 5rem 0;
   height: 10rem;
 }
+
 .ItemListContainer #carousel img {
   height: 10rem;
 }
+
 .ItemListContainer .Items-title {
   font-family: "Montserrat", sans-serif;
   text-align: center;
 }
+
 .ItemListContainer .Items-title h1 {
   font-size: 2.2rem;
   text-transform: uppercase;
 }
+
 .ItemListContainer .Items-title span {
   font-weight: bold;
   text-transform: uppercase;
@@ -35,11 +39,16 @@
     height: 20rem;
   }
   .ItemListContainer .Items-title {
+    display: -ms-grid;
     display: grid;
-    align-items: center;
-    grid-template-columns: 1fr -webkit-max-content 1fr;
-    grid-template-columns: 1fr max-content 1fr;
-    grid-template-rows: 27px 0;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-grid-columns: 1fr max-content 1fr;
+        grid-template-columns: 1fr -webkit-max-content 1fr;
+        grid-template-columns: 1fr max-content 1fr;
+    -ms-grid-rows: 27px 0;
+        grid-template-rows: 27px 0;
     grid-gap: 20px;
   }
   .ItemListContainer .Items-title:after, .ItemListContainer .Items-title:before {
@@ -53,6 +62,7 @@
     font-size: 2.8rem;
   }
 }
+
 @media (min-width: 1024px) {
   .ItemListContainer #carousel {
     height: 25rem;
@@ -63,4 +73,5 @@
   .ItemListContainer .Items-title h1 {
     font-size: 4rem;
   }
-}/*# sourceMappingURL=ItemListContainer.css.map */
+}
+/*# sourceMappingURL=ItemListContainer.css.map */

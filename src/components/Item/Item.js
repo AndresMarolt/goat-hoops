@@ -12,7 +12,7 @@ const Item = ({id, jugador, precio, nombre, img}) => {
                 </div>
 
                 <div className="Producto__comprar">
-                    <p className="Producto__comprar-precio">{precio}</p>
+                    <p className="Producto__comprar-precio">${precio}</p>
                     <p className="Producto__comprar-titulo">{nombre}</p>
                 </div>
             </div>

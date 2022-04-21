@@ -1,15 +1,26 @@
 .Cart {
-  margin-top: 3rem;
+  margin: 3rem 0;
+  font-family: "Arimo", sans-serif;
 }
+
 .Cart_title {
   text-transform: uppercase;
   font-family: "Montserrat", sans-serif;
   text-align: center;
   margin-bottom: 1rem;
 }
+
 .Cart_list {
   list-style-type: none;
   background-color: white;
-  box-shadow: 2px 2px 2px rgb(218, 218, 218);
-  padding: 0.5rem;
-}/*# sourceMappingURL=Cart.css.map */
+  -webkit-box-shadow: 2px 2px 2px #dadada;
+          box-shadow: 2px 2px 2px #dadada;
+  padding: .5rem;
+  margin-bottom: 2rem;
+}
+
+.Cart_subtotal {
+  text-transform: uppercase;
+  text-align: right;
+}
+/*# sourceMappingURL=Cart.css.map */

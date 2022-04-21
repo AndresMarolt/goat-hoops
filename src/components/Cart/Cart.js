@@ -5,12 +5,22 @@ import CartContext from "../../context/CartContext";
 
 const Cart = () => {
 
-    const {cart, removeItem, clearCart} = useContext(CartContext);
+    const {cart, getQuantity, getSubtotal} = useContext(CartContext);
 
+
+    if(!cart.length) {
+        return(
+            <div className="Cart">
+                <h1 className='Cart_title'>Carrito Vacío</h1>
+            </div>
+        )
+    } 
+        
     return(
         <div className="Cart">
             <h1 className='Cart_title'>Carrito</h1>
-            {cart && <ul className="Cart_list">{ cart.map(prod => <CartItem key={prod.id} {...prod} />) }</ul>}
+            <ul className="Cart_list"> {cart.map(prod => <CartItem key={prod.id} {...prod} /> )} </ul>
+            <h2 className='Cart_subtotal'>Subtotal ({getQuantity() > 1 ? `${getQuantity()} productos` : `1 producto`}): ${getSubtotal()}</h2>
         </div>
     )
 }

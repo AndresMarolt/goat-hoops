@@ -10,7 +10,6 @@ export const CartContextProvider = ({ children }) => {
 
     const addItem = (item, quantity) => {
         setCart([...cart, {...item, quantity}]);
-        console.log(cart);
     }
 
     const getQuantity = () => {
@@ -21,6 +20,15 @@ export const CartContextProvider = ({ children }) => {
         localStorage.setItem('carrito', JSON.stringify(cart));
 
         return count;
+    }
+
+    const getSubtotal = () => {
+        let subtotal = 0;
+        cart.forEach(prod => {
+            subtotal += prod.quantity * prod.precio 
+        });
+
+        return subtotal;
     }
 
     const removeItem = (itemId) => {
@@ -37,11 +45,14 @@ export const CartContextProvider = ({ children }) => {
         return cart.some(prod => prod.id === itemId)
     }
 
+
+
     return(
         <CartContext.Provider value={{
             cart,
             addItem,
             getQuantity,
+            getSubtotal,
             removeItem,
             clearCart,
             isInCart
