@@ -1,0 +1,54 @@
+$fuenteHeading:'Montserrat', sans-serif;
+$fuenteParrafos: 'Arimo', sans-serif;
+
+$sm-fontsize: 1.4rem;
+$lg-fontsize: 1.6rem;
+
+$azul: #17408B;
+$blanco: #ffffff;
+$rojo: #C9082A;
+$blanco: #ffffff;
+
+
+.Cart_list-item {
+    display: flex;
+    padding: 1.5rem .5rem;
+    
+    &:not(:last-of-type) {
+        border-bottom: 1px solid rgb(220, 220, 220);
+    }
+
+    .Item_img {
+        width: 33%;
+    }
+
+    .Item_data {
+
+
+        &-nombre {
+            font-size: 1.2rem;
+        }
+
+        &-precio {
+            font-size: $lg-fontsize;
+            font-weight: bold;
+        }
+
+        /* &-quantity {
+            
+        } */
+
+        .Item_delete {
+            align-self: flex-end;
+            border-radius: 5px;
+        }
+    }
+}
+
+@media(min-width: 768px) {
+
+}
+
+@media(min-width: 1024px) {
+    
+}

@@ -10,6 +10,7 @@ export const CartContextProvider = ({ children }) => {
 
     const addItem = (item, quantity) => {
         setCart([...cart, {...item, quantity}]);
+        console.log(cart);
     }
 
     const getQuantity = () => {

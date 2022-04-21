@@ -17,6 +17,9 @@ nav .enlace-logo {
 nav .enlace-logo .logo {
   width: 100%;
 }
+nav .search-bar {
+  display: none;
+}
 nav .nav__bar {
   display: flex;
   flex-direction: row;
@@ -91,7 +94,30 @@ nav .nav__bar .link {
 }
 @media (min-width: 1024px) {
   nav .enlace-logo {
+    width: 11%;
+  }
+  nav .search-bar {
+    width: 30%;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 10px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  nav .search-bar_lupa {
     width: 10%;
+    color: #17408B;
+  }
+  nav .search-bar_barra {
+    width: 90%;
+    border: none;
+    padding: 0.4rem;
+    border-radius: 10px;
+  }
+  nav .search-bar_barra:focus {
+    outline: none;
   }
   nav .nav__bar .link:hover {
     transition: 0.4s ease;

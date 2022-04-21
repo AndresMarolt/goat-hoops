@@ -3,12 +3,19 @@ import './NavBar.css'
 import '../../../node_modules/bootstrap/dist/css/bootstrap.css'
 import '../../../node_modules/bootstrap/dist/js/bootstrap'
 import { Link } from 'react-router-dom'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
 
 const NavBar = () => {
 
     return (
         <nav className='contenedor'>
-            <Link to={'/'} className='enlace-logo'><img src="../img/logo.png" className="logo" alt="goat-hoops-logo"/></Link>
+            <Link to={'/'} className='enlace-logo'><img src="logonuevo.png" className="logo" alt="goat-hoops-logo"/></Link>
+
+            <div className='search-bar'>
+                <FontAwesomeIcon className='search-bar_lupa' icon={faMagnifyingGlass} />
+                <input className='search-bar_barra' placeholder='Encontrá acá tus productos preferidos'/>
+            </div>
 
             <div className="nav__bar">
                 <div className="btn-group dropdown">

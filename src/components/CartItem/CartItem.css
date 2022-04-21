@@ -1,0 +1,26 @@
+.Cart_list-item {
+  display: flex;
+  padding: 1.5rem 0.5rem;
+}
+.Cart_list-item:not(:last-of-type) {
+  border-bottom: 1px solid rgb(220, 220, 220);
+}
+.Cart_list-item .Item_img {
+  width: 33%;
+}
+.Cart_list-item .Item_data {
+  /* &-quantity {
+
+  } */
+}
+.Cart_list-item .Item_data-nombre {
+  font-size: 1.2rem;
+}
+.Cart_list-item .Item_data-precio {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+.Cart_list-item .Item_data .Item_delete {
+  align-self: flex-end;
+  border-radius: 5px;
+}/*# sourceMappingURL=CartItem.css.map */

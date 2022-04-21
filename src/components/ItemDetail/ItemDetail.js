@@ -12,7 +12,7 @@ const ItemDetail = ({id, nombre, img, precio, descripcion, stock}) => {
     const onAddFunction = (count) => {
 
         const productObj = {
-            id, nombre, precio
+            id, nombre, precio, img
         }
 
         addItem(productObj, count);

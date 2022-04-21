@@ -4,6 +4,9 @@ $fuenteParrafos: 'Arimo', sans-serif;
 $sm-fontsize: 1.4rem;
 $lg-fontsize: 1.6rem;
 
+$azul: #17408B;
+$rojo: #C9082A;
+
 button.btn {
     font-size: 1.4rem;
 }
@@ -23,6 +26,10 @@ nav {
         .logo {
             width: 100%;
         }
+    }
+
+    .search-bar {
+        display: none;
     }
 
     .nav__bar {
@@ -118,7 +125,35 @@ nav {
 @media(min-width: 1024px) {
     nav {
         .enlace-logo {
-            width: 10%;
+            width: 11%;
+        }
+
+        .search-bar {
+            width: 30%;
+            margin: 0 auto;
+            text-align: center;
+            border-radius: 10px;
+            background-color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+    
+    
+            &_lupa {
+                width: 10%;
+                color: $azul;
+            }
+    
+            &_barra {
+                width: 90%;
+                border: none;
+                padding: .4rem;
+                border-radius: 10px;
+    
+                &:focus {
+                    outline: none;
+                }
+            }
         }
 
         .nav__bar {
