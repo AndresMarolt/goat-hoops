@@ -6,7 +6,7 @@ const AboutUs = () => {
             <h1 className='Nosotros_title'>Sobre Nosotros</h1>
 
             <div className='Nosotros_info'>
-                <img className='Nosotros_info-img' src="../img/logo.png"></img>
+                <img className='Nosotros_info-img' src="../logonuevo.png"></img>
                 <p className='Nosotros_info-parrafo'>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed luctus tellus eros, nec dapibus elit commodo nec. Etiam egestas 
                     augue augue, sit amet porttitor felis rhoncus quis. Nulla facilisi. Aenean feugiat pretium sodales. Aliquam libero elit, scelerisque 

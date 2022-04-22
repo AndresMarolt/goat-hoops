@@ -37,7 +37,6 @@ $blanco: #ffffff;
 
         &-precio {
             margin-bottom: .4rem;
-            
         }
 
         &-quantity {
@@ -47,7 +46,6 @@ $blanco: #ffffff;
         &-total {
             font-weight: bold;
             margin-bottom: .4rem;
-
         }
 
         .Item_delete {
@@ -96,9 +94,14 @@ $blanco: #ffffff;
 
 @media(min-width: 1024px) {
     .Cart_list-item {
-
+        
         .Item_img {
             width: 20%;
+        }
+
+        .Item_data {
+            font-size: $lg-fontsize;
+
         }
     }
 }

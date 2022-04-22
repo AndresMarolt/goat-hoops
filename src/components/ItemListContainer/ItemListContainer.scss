@@ -13,16 +13,6 @@ $lg-fontsize: 1.6rem;
 }
 
 .ItemListContainer {
-    #carousel {
-        width: 100%;
-        margin: 5rem 0 5rem 0;
-        height: 10rem;
-
-        img {
-            height: 10rem;
-        }
-    }
-
     .Items-title {
         font-family: $fuenteHeading;        
         text-align: center;
@@ -41,12 +31,6 @@ $lg-fontsize: 1.6rem;
 
 @media(min-width: 768px) {
     .ItemListContainer {
-        #carousel {
-            height: 20rem;
-            img {
-                height: 20rem;
-            }
-        }
 
         .Items-title {
             display: grid;
@@ -72,13 +56,6 @@ $lg-fontsize: 1.6rem;
 
 @media(min-width: 1024px) {
     .ItemListContainer {
-        #carousel {
-            height: 25rem;
-            img {
-                height: 25rem;
-            }
-        }
-
         .Items-title {
             h1 {
                 font-size: 4rem;

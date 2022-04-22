@@ -1,0 +1,32 @@
+$fuenteHeading:'Montserrat', sans-serif;
+$fuenteParrafos: 'Arimo', sans-serif;
+
+$sm-fontsize: 1.4rem;
+$lg-fontsize: 1.6rem;
+
+#carousel {
+    width: 100%;
+    margin: 5rem 0 5rem 0;
+    height: 10rem;
+    img {
+        height: 10rem;
+    }
+}
+
+@media(min-width: 768px) {
+    #carousel {
+        height: 20rem;
+        img {
+            height: 20rem;
+        }
+    }
+}
+
+@media(min-width: 1024px) {
+    #carousel {
+        height: 25rem;
+        img {
+            height: 25rem;
+        }
+    }
+}

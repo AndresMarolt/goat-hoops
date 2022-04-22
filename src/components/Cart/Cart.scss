@@ -33,6 +33,7 @@ $blanco: #ffffff;
     &_subtotal {
         text-transform: uppercase;
         text-align: right;
+        margin-bottom: 5rem;
     }
 }
 
@@ -42,5 +43,9 @@ $blanco: #ffffff;
 }
 
 @media(min-width: 1024px) {
-    
+    .Cart {
+        &_title {
+            font-size: 3rem;
+        }
+    }
 }
