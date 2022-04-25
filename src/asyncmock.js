@@ -12,30 +12,6 @@ const products = [
         "descripcion": "Elige una imagen diferente, pero no menos auténtica. Esta camiseta tiene un diseño y una calidad de fabricación excepcionales para ofrecer lo último en ropa de baloncesto."
     },
     {
-        "id": "2",
-        "categoriaId": "camisetas",
-        "tipoId": "icon",
-        "equipo": "Boston Celtics",
-        "jugador": "Jaylen Brown",
-        "precio": 8500,
-        "stock": 9,
-        "img": "/img/Boston/camisetas/brown.webp",
-        "nombre": "Camiseta Boston Celtics - Jaylen Brown (Icon)",
-        "descripcion": "Basado en la auténtica camiseta de la NBA que lleva Jaylen Brown, asegúrate de estar listo para el día del partido con la camiseta Nike Icon Swingman de los Boston Celtics. La camiseta Swingman tiene un ajuste centrado en el rendimiento con una tela de malla doble de primera calidad que proporciona una sensación fuerte pero muy transpirable."
-    },
-    {
-        "id": "3",
-        "categoriaId": "camisetas",
-        "tipoId": "icon",
-        "equipo": "Chicago Bulls",
-        "jugador": "Zach LaVine",
-        "precio": 8500,
-        "stock": 5,
-        "img": "/img/Chicago/camisetas/lavine.jpg",
-        "nombre": "Camiseta Chicago Bulls - Zach LaVine (Icon)",
-        "descripcion": "Basado en la auténtica camiseta de la NBA que lleva Zach Lavine, asegúrate de estar listo para el día del partido con la camiseta Nike Icon Swingman de los Chicago Bulls. La camiseta Swingman tiene un ajuste centrado en el rendimiento con una tela de malla doble de primera calidad que proporciona una sensación fuerte pero muy transpirable."
-    }, */
-    {
         "id": "4",
         "categoriaIdId": "camisetas",
         "tipoId": "icon",
@@ -48,43 +24,6 @@ const products = [
         "descripcion": "Elige una imagen diferente, pero no menos auténtica. Esta camiseta tiene un diseño y una calidad de fabricación excepcionales para ofrecer lo último en ropa de baloncesto."
     },
     {
-        "id": "5",
-        "categoriaId": "camisetas",
-        "tipoId": "association",
-        "equipo": "Cleveland Cavaliers",
-        "jugador": "Darius Garland",
-        "precio": 8500,
-        "stock": 3,
-        "img": "/img/Cleveland/camisetas/garland1.webp",
-        "nombre": "Camiseta Cleveland Cavaliers - Darius Garland (Association)",
-        "descripcion": "Elige una imagen diferente, pero no menos auténtica. Esta camiseta tiene un diseño y una calidad de fabricación excepcionales para ofrecer lo último en ropa de baloncesto."
-    },
-    {
-        "id": "6",
-        "categoriaId": "camisetas",
-        "tipoId": "city-edition",
-        "equipo": "Cleveland Cavaliers",
-        "jugador": "Evan Mobley",
-        "precio": 8500,
-        "stock": 7,
-        "img": "/img/Cleveland/camisetas/mobley.webp",
-        "nombre": "Camiseta Cleveland Cavaliers - Evan Mobley (CIty Edition)",
-        "descripcion": "Elige una imagen diferente, pero no menos auténtica. Esta camiseta tiene un diseño y una calidad de fabricación excepcionales para ofrecer lo último en ropa de baloncesto."
-
-    },
-    {
-        "id": "7",
-        "categoriaId": "camisetas",
-        "tipoId": "association",
-        "equipo": "Dallas Mavericks",
-        "jugador": "Luka Dončić",
-        "precio": 8500,
-        "stock": 7,
-        "img": "/img/Dallas/camisetas/doncic.webp",
-        "nombre": "Camiseta Dallas Mavericks - Luka Dončić (Association)",
-        "descripcion": "Adopta el estilo definitivo de la NBA gracias a esta camiseta. Una confección de gran calidad y unos materiales resistentes aportan auténtica clase a tu forma de vestir."
-    },
-    {
         "id": "8",
         "categoriaId": "camisetas",
         "tipoId": "icon",
@@ -95,18 +34,6 @@ const products = [
         "img": "/img/Indiana/camisetas/turner.webp",
         "nombre": "Camiseta Indiana Pacers - Myles Turner (Icon)",
         "descripcion": "Obtén la calidad que mereces con esta camiseta Swingman. Brillante dentro y fuera de la cancha, ¡ningún aficionado a la NBA puede estar sin ella!"
-    },
-    {
-        "id": "9",
-        "categoriaId": "camisetas",
-        "tipoId": "city-edition",
-        "equipo": "LA Lakers",
-        "jugador": "LeBron James",
-        "precio": 8500,
-        "stock": 7,
-        "img": "/img/Los Angeles (Lakers)/camisetas/lebron.webp",
-        "nombre": "Camiseta Los Angeles Lakers - LeBron James (City Edition)",
-        "descripcion": "Consigue una emblemática prenda de la NBA de gran calidad. Con una confección de gran calidad y un diseño que es una réplica exacta tendrás una imagen igual que la real."
     },
     {
         "id": "10",
@@ -181,18 +108,6 @@ const products = [
         "descripcion": "Basado en la auténtica camiseta de la NBA que lleva Devin Booker, asegúrate de estar listo para el día del partido con la camiseta Nike Association Swingman de los Minnesota Timberwolves. La camiseta Swingman tiene un ajuste centrado en el rendimiento con una tela de malla doble de primera calidad que proporciona una sensación fuerte pero muy transpirable. "
     },
     {
-        "id": "16",
-        "categoriaId": "camisetas",
-        "tipoId": "hardwood-classics",
-        "equipo": "Phoenix Suns",
-        "jugador": "Shawn Marion",
-        "precio": 8500,
-        "stock": 7,
-        "img": "/img/Phoenix/camisetas/marion.webp",
-        "nombre": "Camiseta Phoenix Suns - Shawn Marion (Hardwood Classics)",
-        "descripcion": "Honra a la leyenda de los Phoenix Suns con esta camiseta Shawn Marion Hardwood Classics de Mitchell & Ness"
-    },
-    {
         "id": "17",
         "categoriaId": "camisetas",
         "tipoId": "hardwood-classics",
@@ -218,30 +133,6 @@ const products = [
         
     },
     {
-        "id": "19",
-        "categoriaId": "shorts",
-        "tipoId": "",
-        "equipo": "Chicago Bulls",
-        "jugador": "",
-        "precio": 8500,
-        "nombre": "Nike Courtside Fleece Short - Chicago Bulls",
-        "stock": 7,
-        "img": "/img/Chicago/shorts/short_bulls1.jpg",
-        "descripcion": "Lleva el estilo de la NBA fuera de la cancha. Cómodos y resistentes te concederán un estilo auténtico en el tiempo caluroso."
-    },
-    {
-        "id": "20",
-        "categoriaId": "shorts",
-        "tipoId": "",
-        "equipo": "Orlando Magic",
-        "jugador": "",
-        "precio": 8500,
-        "stock": 7,
-        "img": "/img/Orlando/shorts/short_magic1.webp",
-        "nombre": "Mitchell & Ness Hyper Hoops Short - Orlando Magic",
-        "descripcion": "Prepárate para el calor con estos bonitos pantalones cortos. Ideales para escapadas veraniegas sin abandonar tu deporte favorito."
-    },
-    {
         "id": "21",
         "categoriaId": "shorts",
         "tipoId": "",
@@ -252,18 +143,6 @@ const products = [
         "img": "/img/Brooklyn/shorts/short_nets1.webp",
         "nombre": "Nike Icon Replica Short - Brooklyn Nets",
         "descripcion": "Si buscas un estilo del equipo ligeramente diferente esta es la elección perfecta. ¡Apoya a tu equipo destacando entre la multitud!"
-    },
-    {
-        "id": "22",
-        "categoriaId": "remeras",
-        "tipoId": "",
-        "equipo": "NBA",
-        "jugador": "",
-        "precio": 8500,
-        "stock": 7,
-        "img": "/img/_NBA/remeras/remera_nba1.webp",
-        "nombre": "NBA Nike Team 31 75th Anniversary",
-        "descripcion": "Demuestra siempre tu apoyo de la mejor forma. Sola o acompañada de una chaqueta, en casa o en la calle, esta camiseta te concederá un estilo de baloncesto real en cualquier momento y lugar."
     },
     {
         "id": "23",
@@ -290,18 +169,6 @@ const products = [
         "descripcion": "Demuestra siempre tu apoyo de la mejor forma. Sola o acompañada de una chaqueta, en casa o en la calle, esta camiseta te concederá un estilo de baloncesto real en cualquier momento y lugar."
     },
     {
-        "id": "25",
-        "categoriaId": "buzos",
-        "tipoId": "",
-        "equipo": "Washington Wizards",
-        "jugador": "",
-        "precio": 8500,
-        "stock": 7,
-        "img": "/img/Washington/buzos/wizards_hoodie1.webp",
-        "nombre": "Washington Wizards Fanatics Branded Splatter Graphic - Buzo con capucha",
-        "descripcion": "Una prenda que irá allá donde vayas y es increíblemente versátil. Cálida y confortable, pero también práctica y con el diseño clásico del equipo, lucirás y te sentirás fantástico dondequiera que vayas."
-    },
-    {
         "id": "26",
         "categoriaId": "buzos",
         "tipoId": "",
@@ -324,7 +191,7 @@ const products = [
         "img": "/img/Utah/buzos/jazz_hoodie1.webp",
         "nombre": "Utah Jazz Fanatics Branded Iconic Hometown Graphic - Buzo con capucha",
         "descripcion": "Una prenda que irá allá donde vayas y es increíblemente versátil. Cálida y confortable, pero también práctica y con el diseño clásico del equipo, lucirás y te sentirás fantástico dondequiera que vayas."
-    }
+    } */
 ];
 
 export const obtainProducts = (categoriaId) => {

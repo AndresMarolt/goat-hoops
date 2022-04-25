@@ -13,6 +13,8 @@ const ItemCount = ({stock, initial, onAdd}) => {
         if(counter < stock) setCounter(counter + 1);
     }
 
+    console.log("ITEMCOUNT");
+
     return(
         <div className='agregar__carrito'>
             <p>Disponibles: {stock}</p>

@@ -8,6 +8,7 @@ import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
 
 const NavBar = () => {
 
+
     return (
         <nav className='contenedor'>
             <Link to={'/'} className='enlace-logo'><img src="logonuevo.png" className="logo" alt="goat-hoops-logo"/></Link>

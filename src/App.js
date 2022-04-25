@@ -20,8 +20,8 @@ const App = () => {
 
           <main>
             <div className='contenedor'>
-                <Routes>
-                  <Route path="/" element={<ItemListContainer />} />
+                <Routes>  
+                  <Route path="/" element={<ItemListContainer />} />  
 
                   <Route path="/categoria/:categoriaId/" element={<ItemListContainer />}>
                     <Route path=":tipoId" element={<ItemListContainer />} />

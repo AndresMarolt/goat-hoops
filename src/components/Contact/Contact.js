@@ -1,6 +1,8 @@
 import './Contact.css'
 
 const Contact = () => {
+
+    console.log("CONTACT");
     return(
         <div className='Contacto'>
             <h1 className='Contacto_title'>Contacto</h1>

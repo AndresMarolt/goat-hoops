@@ -2,6 +2,7 @@ import './BannerCarousel.css'
 
 
 const BannerCarousel = () => {
+
     return(
         <div id="carousel" className="carousel slide carousel-fade" data-bs-ride="carousel">
                 <div className="carousel-inner">

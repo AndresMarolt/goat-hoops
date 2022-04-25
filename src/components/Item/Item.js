@@ -3,7 +3,6 @@ import './Item.css'
 
 const Item = ({id, jugador, precio, nombre, img}) => {
 
-
     return(
         <div className="Producto">
             <div>
