@@ -194,26 +194,10 @@ const products = [
     } */
 ];
 
-export const obtainProducts = (categoriaId) => {
-    return new Promise( resolve => {
-        setTimeout(() => {
-            resolve(categoriaId ? products.filter((prod) => prod.categoriaId === categoriaId) : products);
-        }, 500);
-    })
-}
-
 export const obtainDetail = (id) => {
     return new Promise( resolve => {
         setTimeout(() => {
             resolve(products.find((prod) => prod.id === id));
-        }, 500);
-    })
-}
-
-export const obtainTipoId = (tipo) => {
-    return new Promise( resolve => {
-        setTimeout(() => {
-            resolve(products.filter((prod) => prod.tipoId === tipo));
         }, 500);
     })
 }

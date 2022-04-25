@@ -2,7 +2,6 @@ import './ItemListContainer.css'
 import ItemList from '../ItemList/ItemList';
 import BannerCarousel from '../BannerCarousel/BannerCarousel';
 import { useEffect, useState } from 'react';
-import { obtainProducts, obtainTipoId } from '../../asyncmock';
 import { useParams } from 'react-router-dom';
 import { getDocs, collection, query, where } from 'firebase/firestore';
 import { firestoreDDBB } from '../../services/firebase';

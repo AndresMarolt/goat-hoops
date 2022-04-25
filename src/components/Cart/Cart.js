@@ -7,7 +7,6 @@ const Cart = () => {
 
     const {cart, getQuantity, getSubtotal} = useContext(CartContext);
 
-
     if(!cart.length) {
         return(
             <div className="Cart">
