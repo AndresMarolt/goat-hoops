@@ -28,7 +28,7 @@ const Contact = () => {
                 </div>
                 <div className='Campo'>
                     <label htmlFor="message">Mensaje</label>
-                    <textarea id="message" placeholder='Mensaje'></textarea>
+                    <textarea id="message" placeholder='Mensaje' />
                 </div>
 
                 <button type="submit">Enviar</button>

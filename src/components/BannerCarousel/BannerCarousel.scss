@@ -6,7 +6,7 @@ $lg-fontsize: 1.6rem;
 
 #carousel {
     width: 100%;
-    margin: 5rem 0 5rem 0;
+    margin-bottom: 5rem;
     height: 10rem;
     img {
         height: 10rem;
@@ -24,9 +24,9 @@ $lg-fontsize: 1.6rem;
 
 @media(min-width: 1024px) {
     #carousel {
-        height: 25rem;
+        height: 35rem;
         img {
-            height: 25rem;
+            height: 35rem;
         }
     }
 }

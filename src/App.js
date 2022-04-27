@@ -19,21 +19,20 @@ const App = () => {
           </header>
 
           <main>
-            <div className='contenedor'>
-                <Routes>  
-                  <Route path="/" element={<ItemListContainer />} />  
+            {/* <img src="/img/etc/background.jpg" className='background-img'></img> */}
+            <Routes>  
+              <Route path="/" element={<ItemListContainer />} />  
 
-                  <Route path="/categoria/:categoriaId/" element={<ItemListContainer />}>
-                    <Route path=":tipoId" element={<ItemListContainer />} />
-                  </Route>
+              <Route path="/categoria/:categoriaId/" element={<ItemListContainer />}>
+                <Route path=":tipoId" element={<ItemListContainer />} />
+              </Route>
 
-                  <Route path="/item/:productId" element={<ItemDetailContainer />} />
-                  <Route path="/nosotros" element={<AboutUs/>} />
-                  <Route path="/contacto" element={<Contact />} />
-                  <Route path="/cart" element={<Cart />} />
-                  <Route path="*" element={<h1>404 NOT FOUND</h1>} />
-                </Routes>
-            </div>
+              <Route path="/item/:productId" element={<ItemDetailContainer />} />
+              <Route path="/nosotros" element={<AboutUs/>} />
+              <Route path="/contacto" element={<Contact />} />
+              <Route path="/cart" element={<Cart />} />
+              <Route path="*" element={<h1>404 NOT FOUND</h1>} />
+            </Routes>
           </main>
         </BrowserRouter>
         <footer>

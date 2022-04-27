@@ -11,6 +11,11 @@ $lg-fontsize: 1.6rem;
     justify-items: center;
     gap: .5rem;
     font-size: $sm-fontsize;
+    text-decoration: none;
+
+    &:hover {
+        color: inherit;
+    }
 
     &__icono {
         align-self: flex-start;

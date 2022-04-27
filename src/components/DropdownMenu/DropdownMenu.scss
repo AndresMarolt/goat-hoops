@@ -1,0 +1,44 @@
+$fuenteHeading:'Montserrat', sans-serif;
+$fuenteParrafos: 'Arimo', sans-serif;
+
+$sm-fontsize: 1.4rem;
+$lg-fontsize: 1.6rem;
+
+$azul: #17408B;
+$rojo: #C9082A;
+
+
+.dropdown-menu {
+
+    position: absolute;
+    inset: 30px auto auto 0px;
+    margin: 0px;
+    transition: .5s ease;
+    transform: unset;
+    color: black;
+
+    .btn-submenu {
+        font-weight: normal;
+        color: black;
+        box-shadow: unset;
+        padding: 0.25rem 1rem;
+    }
+
+    .dropdown-item {
+        text-decoration: none;
+        font-size: $sm-fontsize;
+        
+    }
+    li:not(:last-of-type) {
+        border-bottom: 1px solid rgb(220, 220, 220);
+    }
+}
+
+
+@media(min-width: 768px) {
+    .dropdown-menu {
+        .dropdown-item {
+            font-size: $lg-fontsize;
+        }
+    }
+}

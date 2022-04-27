@@ -16,7 +16,7 @@ const Cart = () => {
     } 
         
     return(
-        <div className="Cart">
+        <div className="Cart contenedor">
             <h1 className='Cart_title'>Carrito</h1>
             <ul className="Cart_list"> {cart.map(prod => <CartItem key={prod.id} {...prod} /> )} </ul>
             <h2 className='Cart_subtotal'>Subtotal ({getQuantity() > 1 ? `${getQuantity()} productos` : `1 producto`}): ${getSubtotal()}</h2>

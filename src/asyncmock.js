@@ -193,11 +193,3 @@ const products = [
         "descripcion": "Una prenda que irá allá donde vayas y es increíblemente versátil. Cálida y confortable, pero también práctica y con el diseño clásico del equipo, lucirás y te sentirás fantástico dondequiera que vayas."
     } */
 ];
-
-export const obtainDetail = (id) => {
-    return new Promise( resolve => {
-        setTimeout(() => {
-            resolve(products.find((prod) => prod.id === id));
-        }, 500);
-    })
-}

@@ -1,4 +1,3 @@
-import { obtainDetail } from "../../asyncmock";
 import ItemDetail from "../ItemDetail/ItemDetail";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
@@ -35,14 +34,14 @@ const ItemDetailContainer = () => {
     }, [productId])
 
     return(
-        <>
+        <div className="contenedor">
             {loading ? 
                 <LoadingAnimation /> : 
             product ? 
                 <ItemDetail key={product.id} {...product} /> : 
                 
                 <h1>El producto no existe</h1>}
-        </>
+        </div>
     )
 }
 

@@ -47,4 +47,18 @@ button.btn {
   margin: 0 auto;
   width: 85%;
 }
+
+/* main {
+    width: 100%;
+    .contenedor {
+        z-index: 1000;
+        position: relative;
+    }
+    .background-img {
+        position: absolute;
+        width: 100%;
+        opacity: .08;
+        z-index: 100;
+    }
+} */
 /*# sourceMappingURL=index.css.map */
