@@ -18,7 +18,6 @@ const ItemListContainer = () => {
 
         const queryConstraints = [];
 
-        
         queryConstraints.push(where('categoriaId', '==', categoriaId));
         if(tipoId) queryConstraints.push(where('tipoId', '==', tipoId));
         
@@ -29,9 +28,7 @@ const ItemListContainer = () => {
 
         getDocs(collectionRef) 
             .then(response => {
-
                 const products = response.docs.map(doc => {
-                    console.log(doc.data());
                     return { id: doc.id, ...doc.data()}
                 })
                 setProducts(products);

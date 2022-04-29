@@ -27,7 +27,7 @@ $rojo: #C9082A;
     .dropdown-item {
         text-decoration: none;
         font-size: $sm-fontsize;
-        
+        text-transform: capitalize;
     }
     li:not(:last-of-type) {
         border-bottom: 1px solid rgb(220, 220, 220);

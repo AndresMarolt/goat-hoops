@@ -7,6 +7,13 @@ const Cart = () => {
 
     const {cart, getQuantity, getSubtotal} = useContext(CartContext);
 
+    const objOrden = {
+        items: cart,
+        buyer: 'Andrés Marolt',
+        email: 'andresmmarolt@gmail'
+    }
+
+
     if(!cart.length) {
         return(
             <div className="Cart">

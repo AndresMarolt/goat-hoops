@@ -9,7 +9,23 @@ export const CartContextProvider = ({ children }) => {
     const [cart, setCart] = useState(JSON.parse(localStorage.getItem('carrito')) || [] );
 
     const addItem = (item, quantity) => {
-        setCart([...cart, {...item, quantity}]);
+
+        const prodAgregado = {...item, quantity};
+
+        if(!isInCart(prodAgregado.id)) {
+            setCart([...cart, prodAgregado]);
+        } else {
+            const nuevosProds = cart.map(prod => {
+
+                if(prod.id === prodAgregado.id) {
+                    const nuevoProd = {...prod, quantity: quantity}
+                    return nuevoProd;
+                } else {
+                    return prod;
+                }
+            })
+            setCart(nuevosProds);
+        }
     }
 
     const getQuantity = () => {

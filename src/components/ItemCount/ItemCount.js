@@ -13,7 +13,10 @@ const ItemCount = ({stock, initial, onAdd}) => {
         if(counter < stock) setCounter(counter + 1);
     }
 
-    console.log("ITEMCOUNT");
+
+    if(stock === 0 ) {
+        return <button className='agregar__carrito-boton' disabled>Producto sin stock </button>
+    }
 
     return(
         <div className='agregar__carrito'>

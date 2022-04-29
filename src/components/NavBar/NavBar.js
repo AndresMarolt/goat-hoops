@@ -1,14 +1,12 @@
 import CartWidget from '../CartWidget/CartWidget'
 import './NavBar.css'
-import '../../../node_modules/bootstrap/dist/css/bootstrap.css'
-import '../../../node_modules/bootstrap/dist/js/bootstrap'
 import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
 import DropdownMenu from '../DropdownMenu/DropdownMenu'
 
-const NavBar = () => {
 
+const NavBar = () => {
 
     return (
         <nav className='contenedor'>
@@ -20,10 +18,10 @@ const NavBar = () => {
             </div>
 
             <div className="nav__bar">
-                <DropdownMenu />
+                <DropdownMenu/>
                 <Link to={'/nosotros'} className="link">Nosotros</Link>
                 <Link to={'/contacto'} className="link">Contacto</Link>
-                <CartWidget ammount="0"/>
+                <CartWidget />
 
             </div>
 

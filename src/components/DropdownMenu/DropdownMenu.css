@@ -20,6 +20,7 @@
 .dropdown-menu .dropdown-item {
   text-decoration: none;
   font-size: 1.4rem;
+  text-transform: capitalize;
 }
 
 .dropdown-menu li:not(:last-of-type) {
