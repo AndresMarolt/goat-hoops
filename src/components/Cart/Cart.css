@@ -3,32 +3,41 @@
   margin-bottom: 3rem;
   font-family: "Arimo", sans-serif;
 }
-
 .Cart_title {
   text-transform: uppercase;
   font-family: "Montserrat", sans-serif;
   text-align: center;
   margin-bottom: 1rem;
 }
-
 .Cart_list {
   list-style-type: none;
   background-color: white;
-  -webkit-box-shadow: 2px 2px 2px #dadada;
-          box-shadow: 2px 2px 2px #dadada;
-  padding: .5rem;
+  box-shadow: 2px 2px 2px rgb(218, 218, 218);
+  padding: 0.5rem;
   margin-bottom: 2rem;
 }
-
 .Cart_subtotal {
   text-transform: uppercase;
   text-align: right;
   margin-bottom: 5rem;
+}
+.Cart_buttons {
+  text-align: center;
+}
+.Cart_buttons .generar-orden {
+  font-size: 1.4rem;
+  padding: 0.5rem 0.5rem;
 }
 
 @media (min-width: 1024px) {
   .Cart_title {
     font-size: 3rem;
   }
-}
-/*# sourceMappingURL=Cart.css.map */
+  .Cart_buttons {
+    text-align: center;
+  }
+  .Cart_buttons .generar-orden {
+    font-size: 1.6rem;
+    padding: 1rem 1rem;
+  }
+}/*# sourceMappingURL=Cart.css.map */

@@ -1,27 +1,25 @@
 @-webkit-keyframes pulse {
   0% {
-    opacity: .1;
+    opacity: 0.1;
   }
   20% {
-    opacity: .8;
+    opacity: 0.8;
   }
   100% {
-    opacity: .1;
+    opacity: 0.1;
   }
 }
-
 @keyframes pulse {
   0% {
-    opacity: .1;
+    opacity: 0.1;
   }
   20% {
-    opacity: .8;
+    opacity: 0.8;
   }
   100% {
-    opacity: .1;
+    opacity: 0.1;
   }
 }
-
 .Svg-container {
   width: 15%;
   margin: 15rem auto;
@@ -47,37 +45,36 @@
 }
 
 .bb-6 {
-  -webkit-animation-delay: -.875s;
-          animation-delay: -.875s;
+  -webkit-animation-delay: -0.875s;
+          animation-delay: -0.875s;
 }
 
 .bb-5 {
-  -webkit-animation-delay: -.75s;
-          animation-delay: -.75s;
+  -webkit-animation-delay: -0.75s;
+          animation-delay: -0.75s;
 }
 
 .bb-4 {
-  -webkit-animation-delay: -.625s;
-          animation-delay: -.625s;
+  -webkit-animation-delay: -0.625s;
+          animation-delay: -0.625s;
 }
 
 .bb-3 {
-  -webkit-animation-delay: -.5s;
-          animation-delay: -.5s;
+  -webkit-animation-delay: -0.5s;
+          animation-delay: -0.5s;
 }
 
 .bb-2 {
-  -webkit-animation-delay: -.375s;
-          animation-delay: -.375s;
+  -webkit-animation-delay: -0.375s;
+          animation-delay: -0.375s;
 }
 
 .bb-1 {
-  -webkit-animation-delay: -.25s;
-          animation-delay: -.25s;
+  -webkit-animation-delay: -0.25s;
+          animation-delay: -0.25s;
 }
 
 .bb-0 {
-  -webkit-animation-delay: -.125s;
-          animation-delay: -.125s;
-}
-/*# sourceMappingURL=LoadingAnimation.css.map */
+  -webkit-animation-delay: -0.125s;
+          animation-delay: -0.125s;
+}/*# sourceMappingURL=LoadingAnimation.css.map */

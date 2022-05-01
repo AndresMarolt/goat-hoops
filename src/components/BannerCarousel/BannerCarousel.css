@@ -3,7 +3,6 @@
   margin-bottom: 5rem;
   height: 10rem;
 }
-
 #carousel img {
   height: 10rem;
 }
@@ -16,7 +15,6 @@
     height: 20rem;
   }
 }
-
 @media (min-width: 1024px) {
   #carousel {
     height: 35rem;
@@ -24,5 +22,4 @@
   #carousel img {
     height: 35rem;
   }
-}
-/*# sourceMappingURL=BannerCarousel.css.map */
+}/*# sourceMappingURL=BannerCarousel.css.map */
