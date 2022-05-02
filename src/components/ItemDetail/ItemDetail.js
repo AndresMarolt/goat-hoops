@@ -7,8 +7,6 @@ import Cart from '../Cart/Cart';
 
 const ItemDetail = ({id, nombre, img, precio, descripcion, stock}) => {
 
-    console.log("ITEMDETAIL");
-
     const {addItem, isInCart, cart} = useContext(CartContext);
 
     const onAddFunction = (count) => {

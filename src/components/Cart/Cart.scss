@@ -12,7 +12,7 @@ $blanco: #ffffff;
 
 .Cart {
     margin-top: 3rem;
-    margin-bottom: 3rem;
+    margin-bottom: 30rem;
     font-family: $fuenteParrafos;
 
     &_title {
@@ -55,7 +55,7 @@ $blanco: #ffffff;
 
 @media(min-width: 768px) {
     .Cart {
-
+        margin-bottom: 40rem;
         &_buttons {
             flex-direction: row;
             
@@ -68,14 +68,11 @@ $blanco: #ffffff;
 
 @media(min-width: 1024px) {
     .Cart {
-        margin-bottom: 12rem;
+        margin-bottom: 50rem;
         &_title {
             font-size: 3rem;
         }
 
-        &_empty {
-            margin-bottom: 50rem;
-        }
 
         &_buttons {
             text-align: center;

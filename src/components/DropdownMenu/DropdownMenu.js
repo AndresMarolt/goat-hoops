@@ -59,10 +59,6 @@ const DropdownMenu = () => {
                         <li key={cat.id}><NavLink to={`/categoria/${cat.id}`} className='dropdown-item item'>
                             {cat.descripcion}
                         </NavLink></li>
-
-
-                        
-                        
                 )}
 
             </ul>

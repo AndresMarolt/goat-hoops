@@ -47,13 +47,13 @@ const Cart = () => {
             }) .then(() => {
                 if(outOfStock.length === 0) {                    
                     const collectionRef = collection(firestoreDDBB, 'orders');      
-                    return addDoc(collectionRef, objOrder);             
+                    return addDoc(collectionRef, objOrder);
                 } else {
-                    return Promise.reject({ name: 'outOfStockError', products: outOfStock});   
+                    return Promise.reject({ name: 'outOfStockError', products: outOfStock});
                 }
             }).then(({ id }) => {                               
                 batch.commit();                                  
-                console.log(`El ID de la orden es ${id}`);
+                console.log(`El ID de su orden es ${id}`);
                 clearCart();
             }).catch(error => {
                 console.log(error);
