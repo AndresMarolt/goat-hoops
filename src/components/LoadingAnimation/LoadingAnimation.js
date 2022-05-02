@@ -3,7 +3,6 @@ import './LoadingAnimation.css'
 
 const LoadingAnimation = () => {
 
-    console.log("LOADINGANIMATION");
     return(
         <div className='Svg-container'>
             <svg viewBox="0 0 866 866" xmlns="http://www.w3.org/2000/svg" width="400" className='svg'>

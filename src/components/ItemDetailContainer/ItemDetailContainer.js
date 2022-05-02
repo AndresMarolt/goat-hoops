@@ -22,15 +22,6 @@ const ItemDetailContainer = () => {
         }).finally(() => {
             setLoading(false);
         })
-
-        /* obtainDetail(productId)
-            .then((prod) => {
-                setProduct(prod);
-            }).catch((error) => {
-                console.log(error);
-            }).finally(() => {
-                setLoading(false);
-            }) */
     }, [productId])
 
     return(

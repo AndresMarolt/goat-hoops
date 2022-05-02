@@ -1,10 +1,10 @@
 import './Cart.css'
-import { useContext, useState } from "react";
 import CartItem from "../CartItem/CartItem";
 import CartContext from "../../context/CartContext";
 import LoadingAnimation from '../LoadingAnimation/LoadingAnimation';
+import { useContext, useState } from "react";
 import { firestoreDDBB } from '../../services/firebase';
-import { writeBatch, getDocs, getDoc, query, where, documentId, collection, addDoc } from 'firebase/firestore';
+import { writeBatch, getDocs, query, where, documentId, collection, addDoc } from 'firebase/firestore';
 
 const Cart = () => {
 
@@ -15,7 +15,7 @@ const Cart = () => {
     const createOrder = () => {
         setLoading(true);
         
-        const objOrder = {                          // Se crea un objeto Order, que contiene los siguientes campos:
+        const objOrder = {                           
             items: cart,
             buyer: {
                 name: 'Andrés Marolt',
@@ -26,33 +26,33 @@ const Cart = () => {
             date: new Date()
         }
     
-        const ids = cart.map(prod => prod.id );         // La variable "ids" contiene los ids de cada producto del carrito
-        const batch = writeBatch(firestoreDDBB);        // Se crea una "cajita" llamada batch donde se van a guardar los cambios a realizar para hacerlos todos juntos al final.
+        const ids = cart.map(prod => prod.id );          
+        const batch = writeBatch(firestoreDDBB);         
         const collectionRef = collection(firestoreDDBB, 'products') 
-        const outOfStock = [];                          // Productos sin stock: ninguno por ahora
+        const outOfStock = [];                           
     
-        getDocs(query(collectionRef, where(documentId(), 'in', ids)))   // Vamos a buscar en la colección products aquellos documentos que estén en el carrito
+        getDocs(query(collectionRef, where(documentId(), 'in', ids)))    
             .then(response => {
-                response.docs.forEach(doc => {      // Iteramos a través de cada documento devuelto
-                    const dataDoc = doc.data();     // dataDoc contiene los campos de cada documento obtenido
+                response.docs.forEach(doc => {       
+                    const dataDoc = doc.data();      
     
-                    const prodQuantity = cart.find(prod => prod.id === doc.id)?.quantity;   // Se busca en el cart el producto en cuestión para que, si este existe, obtengamos su cantidad
+                    const prodQuantity = cart.find(prod => prod.id === doc.id)?.quantity;    
     
-                    if(dataDoc.stock >= prodQuantity) {         // Si el stock que figura en firestore es mayor o igual a la cantidad que se agregó al carrito...
-                        batch.update(doc.ref, {stock: dataDoc.stock - prodQuantity});   // ... se añadira a la "cajita" batch el update del stock 
+                    if(dataDoc.stock >= prodQuantity) {          
+                        batch.update(doc.ref, {stock: dataDoc.stock - prodQuantity});    
                     } else {
-                        outOfStock.push({id: doc.id, ...dataDoc})  // ... si no, se agregará el producto al array de productos sin stock
+                        outOfStock.push({id: doc.id, ...dataDoc})   
                     }
                 });
             }) .then(() => {
-                if(outOfStock.length === 0) {                   // Al finalizar, si el array de productos sin stock está vacío...
+                if(outOfStock.length === 0) {                    
                     const collectionRef = collection(firestoreDDBB, 'orders');      
-                    return addDoc(collectionRef, objOrder);            // ... Se añadirá un documento "order" a la colección "orders"
+                    return addDoc(collectionRef, objOrder);             
                 } else {
-                    return Promise.reject({ name: 'outOfStockError', products: outOfStock});  // Si el array de productos sin stock no está vacío, retornar un error
+                    return Promise.reject({ name: 'outOfStockError', products: outOfStock});   
                 }
             }).then(({ id }) => {                               
-                batch.commit();                                 // Si hasta acá todo está bien entonces se va a commitear los cambios en firestore con la actualización del stock
+                batch.commit();                                  
                 console.log(`El ID de la orden es ${id}`);
                 clearCart();
             }).catch(error => {
@@ -62,28 +62,35 @@ const Cart = () => {
             });
 
     }
-
-    if(loading) {
-        return <h1>Se está generando su orden</h1>
-    }
     
 
     if(!cart.length) {
         return(
             <div className="Cart">
-                <h1 className='Cart_title'>Carrito Vacío</h1>
+                <h1 className='Cart_title Cart_empty'>Carrito Vacío</h1>
             </div>
         )
     } 
         
     return(
         <div className="Cart contenedor">
-            <h1 className='Cart_title'>Carrito</h1>
-            <ul className="Cart_list"> {cart.map(prod => <CartItem key={prod.id} {...prod} /> )} </ul>
-            <h2 className='Cart_subtotal'>Subtotal ({getQuantity() > 1 ? `${getQuantity()} productos` : `1 producto`}): ${getSubtotal()}</h2>
-            <div className='Cart_buttons'>
-                <button onClick={() => createOrder()} className="generar-orden">Generar Orden</button>
-            </div>
+            {
+                loading ?
+                    <>
+                        <h1 className='Cart_title'>Procesando su orden...</h1>
+                        <LoadingAnimation />
+                    </>
+                    :
+                    <>
+                        <h1 className='Cart_title'>Carrito</h1>
+                        <ul className="Cart_list"> {cart.map(prod => <CartItem key={prod.id} {...prod} /> )} </ul>
+                        <h2 className='Cart_subtotal'>Subtotal ({getQuantity() > 1 ? `${getQuantity()} productos` : `1 producto`}): ${getSubtotal()}</h2>
+                        <div className='Cart_buttons'>
+                            <button onClick={() => createOrder()} className="Cart_button">Generar Orden</button>
+                            <button onClick={() => clearCart()} className="Cart_button">Vaciar Carrito</button>
+                        </div>
+                    </>
+            }
         </div>
     )
 }

@@ -10,6 +10,7 @@ import { firestoreDDBB } from '../../services/firebase'
 const DropdownMenu = () => {
 
     const [categorias, setCategorias] = useState([]);
+    const [tipos, setTipos] = useState([]);
 
     useEffect(() => {
         getDocs(collection(firestoreDDBB, 'categorias'))
@@ -19,6 +20,15 @@ const DropdownMenu = () => {
                     return {id: doc.id, ...doc.data()}
                 })
                 setCategorias(categorias);
+            })
+        
+        getDocs(collection(firestoreDDBB, 'categorias', 'camisetas', 'tipos'))
+            .then(response => {
+                console.log(response.docs);
+                const tipos = response.docs.map(doc => {
+                    return {id: doc.id, ...doc.data()}
+                })
+                setTipos(tipos);
             })
     }, [])
 
@@ -30,15 +40,15 @@ const DropdownMenu = () => {
             <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton">
 
                 {categorias.map(cat => 
-                    cat.tipos ? 
-                        <li>
+                    cat.id === 'camisetas' ? 
+                        <li key="dropdend">
                             <div className="btn-group dropend">
                                 <button key={cat.id} className="dropdown-toggle link btn-submenu dropdown-item" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
                                     {cat.descripcion}
                                 </button>
                                 <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton2">
-                                    {cat.tipos.map(tipo => 
-                                        <li><NavLink to={`/categoria/camisetas/${tipo}`} className="dropdown-item subitem">{tipo}</NavLink></li>    
+                                    {tipos.map(tipo => 
+                                        <li key={tipo.id}><NavLink to={`/categoria/camisetas/${tipo.id}`} className="dropdown-item subitem">{tipo.descripcion}</NavLink></li>    
                                     )}
                                 </ul>
                             </div>
@@ -46,7 +56,7 @@ const DropdownMenu = () => {
                         
                         :
 
-                        <li><NavLink key={cat.id} to={`/categoria/${cat.id}`} className='dropdown-item item'>
+                        <li key={cat.id}><NavLink to={`/categoria/${cat.id}`} className='dropdown-item item'>
                             {cat.descripcion}
                         </NavLink></li>
 
@@ -61,21 +71,3 @@ const DropdownMenu = () => {
 }
 
 export default DropdownMenu;
-
-{/* <li>
-                            <div className="btn-group dropend">
-                                <button className="dropdown-toggle link btn-submenu dropdown-item" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Camisetas
-                                </button>
-                                <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton2">
-                                    <li><NavLink to={'/categoria/camisetas/icon'} className="dropdown-item">Icon</NavLink></li>
-                                    <li><NavLink to={'/categoria/camisetas/association'} className="dropdown-item">Association</NavLink></li>
-                                    <li><NavLink to={'/categoria/camisetas/city-edition'} className="dropdown-item">City Edition</NavLink></li>
-                                    <li><NavLink to={'/categoria/camisetas/hardwood-classics'} className="dropdown-item">Hardwood Classics</NavLink></li>
-                                </ul>
-                            </div>
-                        </li>
-                        :
-                        <li><NavLink key={cat.id} to={`/categoria/${cat.id}`} className='dropdown-item'>
-                            {cat.descripcion}
-                        </NavLink></li> */}

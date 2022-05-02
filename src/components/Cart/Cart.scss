@@ -39,8 +39,13 @@ $blanco: #ffffff;
 
     &_buttons {
         text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        width: 50%;
+        margin: 0 auto;
         
-        .generar-orden {
+        .Cart_button {
             font-size: $sm-fontsize;
             padding: .5rem .5rem;
         }
@@ -49,19 +54,33 @@ $blanco: #ffffff;
 
 
 @media(min-width: 768px) {
+    .Cart {
 
+        &_buttons {
+            flex-direction: row;
+            
+            .Cart_button {
+                width: 100%;
+            }
+        }
+    }
 }
 
 @media(min-width: 1024px) {
     .Cart {
+        margin-bottom: 12rem;
         &_title {
             font-size: 3rem;
+        }
+
+        &_empty {
+            margin-bottom: 50rem;
         }
 
         &_buttons {
             text-align: center;
             
-            .generar-orden {
+            .Cart_button {
                 font-size: $lg-fontsize;
                 padding: 1rem 1rem;
             }
