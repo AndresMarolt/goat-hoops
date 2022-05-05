@@ -1,6 +1,7 @@
 import './ItemListContainer.css'
 import ItemList from '../ItemList/ItemList';
 import BannerCarousel from '../BannerCarousel/BannerCarousel';
+import Pagination from '../Pagination/Pagination';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { getDocs, collection, query, where } from 'firebase/firestore';
@@ -11,6 +12,12 @@ const ItemListContainer = () => {
 
     const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(true);
+    
+    const pageNumberLimit = 5;
+    const [passengersData, setData] = useState([]);
+    const [currentPage, setCurrentPage] = useState(1);
+    const [maxPageLimit, setMaxPageLimit] = useState(5);
+    const [minPageLimit, setMinPageLimit] = useState(0);
 
     const { categoriaId, tipoId } = useParams();
 
@@ -32,13 +39,17 @@ const ItemListContainer = () => {
                     return { id: doc.id, ...doc.data()}
                 })
                 setProducts(products);
+
+                setData(products);
             }).catch((error) => {
                 console.log(error);
             }).finally(() => {
                 setLoading(false);
             })
         
-    }, [categoriaId, tipoId])
+    }, [categoriaId, tipoId, currentPage])
+
+
 
     return (
         <div className="ItemListContainer">
@@ -59,7 +70,6 @@ const ItemListContainer = () => {
                     <LoadingAnimation />
                     :
                     <ItemList products={products}/>
-
                 }
             </div>
         </div>

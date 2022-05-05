@@ -1,79 +1,86 @@
 import { useState, useEffect } from "react";
 
+const Pagination = (props) => {
 
-const Pagination = ({totalRecords, pageLimit, pageNeighbours, onPageChanged}) => {
+    // init
+    const { currentPage, maxPageLimit, minPageLimit} = props;
+    const totalPages = props.response.totalPages-1;
+    const data = props.response.data;
 
-    const [currentPage, setCurrentPage] = useState(1);
-    
-    useEffect(() => {
-        pageLimit = typeof pageLimit === 'number' ? pageLimit : 30;
-        totalRecords = typeof totalRecords === 'number' ? totalRecords : 0;
-        
-        pageNeighbours = typeof pageNeighbours === 'number' ? Math.max(0, Math.min(pageNeighbours, 2)) 
-                                                            : 0;
-    
-        const totalPages = Math.ceil(totalRecords / pageLimit);
-
-    }, [])
-
-    const range = (from, to, step = 1) => {
-        let i = from;
-        const range = [];
-        
-        while (i <= to) {
-            range.push(i);
-            i += step;
-        }
-        
-        return range;
-        }
-
-    const fetchPageNumbers = () => {
-        const totalNumbers = (this.pageNeighbours * 2) + 3;
-        const totalBlocks = totalNumbers + 2;
-
-        if (totalPages > totalBlocks) {
-            const startPage = Math.max(2, currentPage - pageNeighbours);
-            const endPage = Math.min(totalPages - 1, currentPage + pageNeighbours);
-            let pages = range(startPage, endPage);
-
-            /**
-             * hasLeftSpill: has hidden pages to the left
-             * hasRightSpill: has hidden pages to the right
-             * spillOffset: number of hidden pages either to the left or to the right
-             */
-            const hasLeftSpill = startPage > 2;
-            const hasRightSpill = (totalPages - endPage) > 1;
-            const spillOffset = totalNumbers - (pages.length + 1);
-
-            switch (true) {
-                // handle: (1) < {5 6} [7] {8 9} (10)
-                case (hasLeftSpill && !hasRightSpill): {
-                    const extraPages = range(startPage - spillOffset, startPage - 1);
-                    pages = [LEFT_PAGE, ...extraPages, ...pages];
-                    break;
-                }
-
-                // handle: (1) {2 3} [4] {5 6} > (10)
-                case (!hasLeftSpill && hasRightSpill): {
-                    const extraPages = range(endPage + 1, endPage + spillOffset);
-                    pages = [...pages, ...extraPages, RIGHT_PAGE];
-                    break;
-                }
-    
-                // handle: (1) < {4 5} [6] {7 8} > (10)
-                case (hasLeftSpill && hasRightSpill):
-                    default: {
-                    pages = [LEFT_PAGE, ...pages, RIGHT_PAGE];
-                    break;
-                }
-            }
-
-            return [1, ...pages, totalPages];
-        }
-
-        
+    // build page numbers list based on total number of pages
+    const pages = [];
+    for(let i=1 ; i<=totalPages; i++){
+        pages.push(i);
     }
+
+    const pageNumbers = pages.map(page => {
+        if(page <= maxPageLimit  && page > minPageLimit) {
+            return(
+                <li key={page} id={page} 
+                    onClick={handlePageClick} 
+                    className={currentPage===page ? 'active' : null}>
+                    {page}
+                </li>
+            );
+        } else {
+            return null;
+        }
+    }
+
+    )
+
+    // page ellipses
+    let pageIncrementEllipses = null;
+    if(pages.length > maxPageLimit){
+        pageIncrementEllipses = <li onClick={handleNextClick}>&hellip;</li>
+    }
+
+    let pageDecremenEllipses = null;
+    if(minPageLimit >=1){
+        pageDecremenEllipses = <li onClick={handlePrevClick}>&hellip;</li> 
+    }
+
+    const renderData = (data)=>{
+        return(
+            <>
+                {data.map((d) => {
+                    <li key={d['_id']}>
+                        El producto con id {d['id'].slice(d['id'].length-5)} tiene un precio de {d.categoria[0].nombre}
+                    </li>
+                })}
+            </>
+        )
+    }
+
+    const handlePrevClick = ()=>{
+        props.onPrevClick();
+    }
+    const handleNextClick = ()=>{
+        props.onNextClick();
+    }
+    const handlePageClick = (e)=>{
+        props.onPageChange(Number(e.target.id));
+    }
+
+    return(
+        <div className="">
+            <div className="mainData">
+              {renderData(data)}
+            </div>
+            <ul className="pageNumbers"> 
+               <li>
+                   <button onClick={handlePrevClick} disabled={currentPage === pages[0]}>Prev</button>
+               </li>
+                    {pageDecremenEllipses}
+                        {pageNumbers}
+                    {pageIncrementEllipses}
+                <li>
+                   <button onClick={handleNextClick} disabled={currentPage === pages[pages.length-1]}>&gt;Next</button>
+               </li>
+            </ul>
+        </div>
+    )
+
 }
 
 export default Pagination;
