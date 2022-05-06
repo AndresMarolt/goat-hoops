@@ -5,6 +5,7 @@ import AboutUs from './components/AboutUs/AboutUs';
 import Contact from './components/Contact/Contact';
 import Footer from './components/Footer/Footer';
 import Cart from './components/Cart/Cart';
+import BuyerForm from './components/BuyerForm/BuyerForm';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { CartContextProvider } from './context/CartContext';
 
@@ -31,6 +32,7 @@ const App = () => {
               <Route path="/nosotros" element={<AboutUs/>} />
               <Route path="/contacto" element={<Contact />} />
               <Route path="/cart" element={<Cart />} />
+              <Route path="/buyerform" element={<BuyerForm /> } />
               <Route path="*" element={<h1>404 NOT FOUND</h1>} />
             </Routes>
           </main>

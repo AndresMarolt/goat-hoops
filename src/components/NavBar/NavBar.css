@@ -3,55 +3,32 @@ button.btn {
 }
 
 nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   font-size: 1.4rem;
   font-family: "Arimo", sans-serif;
 }
-
 nav .enlace-logo {
   text-align: center;
   width: 33%;
 }
-
 nav .enlace-logo .logo {
   width: 100%;
 }
-
 nav .search-bar {
   display: none;
 }
-
 nav .nav__bar {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
   list-style-type: none;
   gap: 1rem;
   padding-bottom: 4rem;
 }
-
 nav .nav__bar .btn-group button.btn {
   text-align: center;
   font-family: "Arimo", sans-serif;
@@ -65,41 +42,29 @@ nav .nav__bar .btn-group button.btn {
   border: unset;
   text-decoration: none;
 }
-
 .link:hover {
   color: inherit;
 }
-
 .link:focus {
-  -webkit-box-shadow: unset;
-          box-shadow: unset;
+  box-shadow: unset;
 }
 
 @media (min-width: 768px) {
   button.btn {
     font-size: 1.6rem;
   }
+
   nav {
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    justify-content: space-between;
     font-size: 1.6rem;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    flex-direction: row;
   }
   nav .enlace-logo {
     width: 15%;
   }
   nav .nav__bar {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
+    flex-direction: row;
+    justify-content: flex-end;
     padding: 0;
   }
   nav .nav__bar .btn-group button {
@@ -107,7 +72,6 @@ nav .nav__bar .btn-group button.btn {
     font-size: 1.6rem;
   }
 }
-
 @media (min-width: 1024px) {
   nav .enlace-logo {
     width: 11%;
@@ -118,15 +82,9 @@ nav .nav__bar .btn-group button.btn {
     text-align: center;
     border-radius: 10px;
     background-color: white;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    justify-content: space-between;
+    align-items: center;
   }
   nav .search-bar_lupa {
     width: 10%;
@@ -135,21 +93,17 @@ nav .nav__bar .btn-group button.btn {
   nav .search-bar_barra {
     width: 90%;
     border: none;
-    padding: .4rem;
+    padding: 0.4rem;
     border-radius: 10px;
   }
   nav .search-bar_barra:focus {
     outline: none;
   }
   nav .nav__bar .link:hover {
-    -webkit-transition: .4s ease;
-    transition: .4s ease;
-    -webkit-box-shadow: 0px 0px 5px 1px rgba(255, 255, 255, 0.721);
-            box-shadow: 0px 0px 5px 1px rgba(255, 255, 255, 0.721);
+    transition: 0.4s ease;
+    box-shadow: 0px 0px 5px 1px rgba(255, 255, 255, 0.721);
   }
   nav .nav__bar .btn-group .dropdown-menu .btn-submenu {
-    -webkit-box-shadow: unset;
-            box-shadow: unset;
+    box-shadow: unset;
   }
-}
-/*# sourceMappingURL=NavBar.css.map */
+}/*# sourceMappingURL=NavBar.css.map */

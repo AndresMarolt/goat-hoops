@@ -5,6 +5,8 @@ import LoadingAnimation from '../LoadingAnimation/LoadingAnimation';
 import { useContext, useState } from "react";
 import { firestoreDDBB } from '../../services/firebase';
 import { writeBatch, getDocs, query, where, documentId, collection, addDoc } from 'firebase/firestore';
+import BuyerForm from '../BuyerForm/BuyerForm';
+
 
 const Cart = () => {
 
@@ -86,8 +88,8 @@ const Cart = () => {
                         <ul className="Cart_list"> {cart.map(prod => <CartItem key={prod.id} {...prod} /> )} </ul>
                         <h2 className='Cart_subtotal'>Subtotal ({getQuantity() > 1 ? `${getQuantity()} productos` : `1 producto`}): ${getSubtotal()}</h2>
                         <div className='Cart_buttons'>
-                            <button onClick={() => createOrder()} className="Cart_button">Generar Orden</button>
-                            <button onClick={() => clearCart()} className="Cart_button">Vaciar Carrito</button>
+                            <a href="/buyerform" /* onClick={() => createOrder()} */ className="Cart_button btn-verde">Continuar</a>
+                            <a onClick={() => clearCart()} className="Cart_button">Vaciar Carrito</a>
                         </div>
                     </>
             }
