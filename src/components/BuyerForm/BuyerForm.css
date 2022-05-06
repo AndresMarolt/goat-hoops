@@ -1,0 +1,50 @@
+.Form_container {
+  width: 100%;
+  background-color: white;
+  -webkit-box-shadow: 2px 2px 2px #dadada;
+          box-shadow: 2px 2px 2px #dadada;
+}
+
+.Buyer-form {
+  width: 95%;
+  padding: 3rem;
+  margin: 3rem auto;
+  font-size: 1.4rem;
+}
+
+.Buyer-form .campo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 1.5rem;
+}
+
+.Buyer-form .campo label {
+  font-weight: bold;
+}
+
+.Buyer-form .campo input {
+  border-radius: 6px;
+  padding: .5rem 0;
+  border: 1px solid #979797;
+}
+
+.color-green {
+  background-color: #00a100 !important;
+}
+
+@media (min-width: 768px) {
+  .Buyer-form {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    font-size: 1.6rem;
+  }
+}
+/*# sourceMappingURL=BuyerForm.css.map */

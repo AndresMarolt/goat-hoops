@@ -61,6 +61,15 @@ $blanco: #ffffff;
     }
 }
 
+.Switch_container {
+    text-align: center;
+    .Switch {
+        font-size: 20px;
+        cursor: pointer;
+        margin: 0 auto !important;
+    }
+}
+
 
 @media(min-width: 768px) {
     .Cart {
@@ -71,6 +80,12 @@ $blanco: #ffffff;
             .Cart_button {
                 width: 100%;
             }
+        }
+    }
+
+    .Switch_container {
+        .Switch {
+            font-size: 25px;
         }
     }
 }
@@ -97,4 +112,14 @@ $blanco: #ffffff;
             }
         }
     }
+
+    .Switch_container {
+        text-align: center;
+        .Switch {
+            font-size: 40px;
+            cursor: pointer;
+            margin: 0 auto !important;
+        }
+    }
+    
 }

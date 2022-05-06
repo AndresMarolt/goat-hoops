@@ -6,23 +6,30 @@ import { useContext, useState } from "react";
 import { firestoreDDBB } from '../../services/firebase';
 import { writeBatch, getDocs, query, where, documentId, collection, addDoc } from 'firebase/firestore';
 import BuyerForm from '../BuyerForm/BuyerForm';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faToggleOn, faToggleOff } from '@fortawesome/free-solid-svg-icons';
 
 
 const Cart = () => {
 
     const [loading, setLoading] = useState(false);
+    const [showForm, setShowForm] = useState(false);
 
     const {cart, getQuantity, getSubtotal, clearCart} = useContext(CartContext);
 
-    const createOrder = () => {
+
+    const createOrder = (name, phone, address, city, email, dni) => {
         setLoading(true);
         
         const objOrder = {                           
             items: cart,
             buyer: {
-                name: 'Andrés Marolt',
-                phone: '11114444',
-                email: 'andresmmarolt@gmail.com'
+                name: name,
+                phone: phone,
+                email: email,
+                address: address,
+                city: city,
+                dni: dni
             },
             total: getSubtotal(),
             date: new Date()
@@ -62,9 +69,7 @@ const Cart = () => {
             }).finally(() => {
                 setLoading(false);
             });
-
     }
-    
 
     if(!cart.length) {
         return(
@@ -82,16 +87,34 @@ const Cart = () => {
                         <h1 className='Cart_title'>Procesando su orden...</h1>
                         <LoadingAnimation />
                     </>
+
                     :
+
                     <>
-                        <h1 className='Cart_title'>Carrito</h1>
-                        <ul className="Cart_list"> {cart.map(prod => <CartItem key={prod.id} {...prod} /> )} </ul>
-                        <h2 className='Cart_subtotal'>Subtotal ({getQuantity() > 1 ? `${getQuantity()} productos` : `1 producto`}): ${getSubtotal()}</h2>
-                        <div className='Cart_buttons'>
-                            <a href="/buyerform" /* onClick={() => createOrder()} */ className="Cart_button btn-verde">Continuar</a>
-                            <a onClick={() => clearCart()} className="Cart_button">Vaciar Carrito</a>
-                        </div>
+                        <div>
+                            <h1 className='Cart_title'>{!showForm ? "Carrito" : "Datos"}</h1>
+                            <div className='Switch_container'>
+                                {!showForm ? <FontAwesomeIcon onClick={() => setShowForm(!showForm)} className='Switch' icon={faToggleOff} /> : <FontAwesomeIcon onClick={() => setShowForm(!showForm)} className='Switch' icon={faToggleOn} />}
+                            </div>
+
+                            {!showForm ?
+                                <>
+                                    <ul className="Cart_list"> {cart.map(prod => <CartItem key={prod.id} {...prod} /> )} </ul>
+                                    <h2 className='Cart_subtotal'>Subtotal ({getQuantity() > 1 ? `${getQuantity()} productos` : `1 producto`}): ${getSubtotal()}</h2>
+                                    <div className='Cart_buttons'>
+                                        <button onClick={() => clearCart()} className="Cart_button">Vaciar Carrito</button>
+                                        <button onClick={() => setShowForm(true)} className="Cart_button">Continuar &gt;&gt;&gt;</button>
+                                    </div>
+                                </>
+                                
+                                :
+
+                                <BuyerForm createOrder={createOrder}/>
+                            }
+
+                        </div>                
                     </>
+
             }
         </div>
     )

@@ -1,19 +1,27 @@
 .carrito {
   color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   justify-items: center;
-  gap: 0.5rem;
+  gap: .5rem;
   font-size: 1.4rem;
   text-decoration: none;
 }
+
 .carrito:hover {
   color: inherit;
 }
+
 .carrito__icono {
-  align-self: flex-start;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
   margin-top: 3px;
 }
+
 .carrito__cantidad {
   margin: 0;
 }
@@ -22,4 +30,5 @@
   .carrito {
     font-size: 1.6rem;
   }
-}/*# sourceMappingURL=CartWidget.css.map */
+}
+/*# sourceMappingURL=CartWidget.css.map */

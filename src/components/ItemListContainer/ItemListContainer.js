@@ -52,7 +52,7 @@ const ItemListContainer = () => {
                     </div>
                     : 
                     <div className='Items-title'>
-                        <h1 className=''>{categoriaId} <span>{tipoId ? tipoId : null}</span></h1>
+                        <h1 className=''>{categoriaId} {tipoId && <span>tipoId</span>}</h1>
                     </div>}
 
                 {loading ? 
