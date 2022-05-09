@@ -2,10 +2,11 @@ import './Cart.css'
 import CartItem from "../CartItem/CartItem";
 import CartContext from "../../context/CartContext";
 import LoadingAnimation from '../LoadingAnimation/LoadingAnimation';
-import { useContext, useState } from "react";
+import BuyerForm from '../BuyerForm/BuyerForm';
+import Notification from '../Notification/Notification';
+import { useContext, useEffect, useState } from "react";
 import { firestoreDDBB } from '../../services/firebase';
 import { writeBatch, getDocs, query, where, documentId, collection, addDoc } from 'firebase/firestore';
-import BuyerForm from '../BuyerForm/BuyerForm';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faToggleOn, faToggleOff } from '@fortawesome/free-solid-svg-icons';
 
@@ -14,11 +15,25 @@ const Cart = () => {
 
     const [loading, setLoading] = useState(false);
     const [showForm, setShowForm] = useState(false);
+    const [showNotification, setShowNotification] = useState(false);
 
     const {cart, getQuantity, getSubtotal, clearCart} = useContext(CartContext);
 
+    useEffect(() => {
+        if(showNotification) {
+            setTimeout(() => {
+                setShowNotification(false);
+            }, 4000);
+        }
+    }, [showNotification])
 
-    const createOrder = (name, phone, address, city, email, dni) => {
+    const createOrder = (name, surname, address, floor, city, phone, email, dni) => {
+
+        if(!name || !surname || !address || !city || !phone || !email || !dni) {
+            setShowNotification(true);
+            return;
+        }
+
         setLoading(true);
         
         const objOrder = {                           
@@ -94,7 +109,7 @@ const Cart = () => {
                         <div>
                             <h1 className='Cart_title'>{!showForm ? "Carrito" : "Datos"}</h1>
                             <div className='Switch_container'>
-                                {!showForm ? <FontAwesomeIcon onClick={() => setShowForm(!showForm)} className='Switch' icon={faToggleOff} /> : <FontAwesomeIcon onClick={() => setShowForm(!showForm)} className='Switch' icon={faToggleOn} />}
+                                <FontAwesomeIcon onClick={() => setShowForm(!showForm)} className='Switch' icon={!showForm ? faToggleOff : faToggleOn} />
                             </div>
 
                             {!showForm ?
@@ -112,7 +127,10 @@ const Cart = () => {
                                 <BuyerForm createOrder={createOrder}/>
                             }
 
-                        </div>                
+                        </div>
+
+                        {showNotification && <Notification type="error" text="Debe llenar todos los campos obligatorios"/>}
+                        
                     </>
 
             }

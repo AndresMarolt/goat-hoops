@@ -1,13 +1,24 @@
 import ItemCount from '../ItemCount/ItemCount';
 import './ItemDetail.css'
-import { useContext, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useContext, useEffect, useState } from 'react';
 import CartContext from '../../context/CartContext';
-import Cart from '../Cart/Cart';
+import Notification from '../Notification/Notification';
 
 const ItemDetail = ({id, nombre, img, precio, descripcion, stock}) => {
 
-    const {addItem, isInCart, cart} = useContext(CartContext);
+    const {addItem} = useContext(CartContext);
+    const [quantity, setQuantity] = useState();
+    const [showNotification, setShowNotification] = useState(false);
+
+    useEffect(() => {
+        if(showNotification) {
+            setTimeout(() => {
+                setShowNotification(false);
+            }, 4000);
+        }
+    }, [showNotification])
+
+
 
     const onAddFunction = (count) => {
 
@@ -15,9 +26,12 @@ const ItemDetail = ({id, nombre, img, precio, descripcion, stock}) => {
             id, nombre, precio, img
         }
 
+        setQuantity(count);
+
         addItem(productObj, count);
+        setShowNotification(true);
     }
-    
+
 
     return(
         <section className="Detalle">
@@ -27,11 +41,11 @@ const ItemDetail = ({id, nombre, img, precio, descripcion, stock}) => {
                     <p className="Detalle__precio">${precio}</p>
                     <p className="Detalle__descripcion">{descripcion}</p>
                     <div id="div">
-                        {/* {isInCart(id) > 0 ? <Link to='/cart' className='link-carrito'><p className='link-carrito_texto'>Ir al Carrito</p></Link> : <ItemCount className="Item-count" stock={stock} initial={1} onAdd={onAddFunction} />} */}
                         <ItemCount className="Item-count" stock={stock} initial={1} onAdd={onAddFunction} /> 
                     </div>
                 </div>
 
+                {showNotification && <Notification type="success" text= {`Se {quantity>1 ? 'agregaron' : 'agregó'} {quantity} {quantity>1 ? 'unidades' : 'unidad'} de {nombre} al carrito correctamente`} />}
         </section>
     )
 }

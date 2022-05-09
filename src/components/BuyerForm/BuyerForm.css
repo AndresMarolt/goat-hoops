@@ -27,6 +27,10 @@
   font-weight: bold;
 }
 
+.Buyer-form .campo_obligatorio {
+  color: red;
+}
+
 .Buyer-form .campo input {
   border-radius: 6px;
   padding: .5rem 0;
@@ -35,6 +39,13 @@
 
 .color-green {
   background-color: #00a100 !important;
+}
+
+.campo_obligatorio-texto {
+  font-size: 1.4rem;
+  color: red;
+  padding-left: 1rem;
+  padding-bottom: 1rem;
 }
 
 @media (min-width: 768px) {
