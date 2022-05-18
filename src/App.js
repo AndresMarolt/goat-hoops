@@ -20,7 +20,6 @@ const App = () => {
           </header>
 
           <main>
-            {/* <img src="/img/etc/background.jpg" className='background-img'></img> */}
             <Routes>  
               <Route path="/" element={<ItemListContainer />} />  
 

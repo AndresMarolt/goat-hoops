@@ -3,41 +3,27 @@
   width: 100%;
   font-family: "Arimo", sans-serif;
 }
-
 .Nosotros_title {
   text-align: center;
   text-transform: uppercase;
   font-family: "Montserrat", sans-serif;
 }
-
 .Nosotros_info {
   font-size: 1.2rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
 }
-
 .Nosotros_info-img {
   width: 75%;
 }
-
 .Nosotros_info-parrafo {
   font-size: 1.2rem;
 }
 
 @media (min-width: 768px) {
   .Nosotros_info {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    flex-direction: row;
   }
   .Nosotros_info-img {
     width: 50%;
@@ -46,7 +32,6 @@
     font-size: 1.4rem;
   }
 }
-
 @media (min-width: 1024px) {
   .Nosotros {
     width: 75%;
@@ -56,10 +41,7 @@
     font-size: 3rem;
   }
   .Nosotros_info {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    flex-direction: row;
   }
   .Nosotros_info-img {
     width: 50%;
@@ -67,5 +49,4 @@
   .Nosotros_info-parrafo {
     font-size: 1.6rem;
   }
-}
-/*# sourceMappingURL=AboutUs.css.map */
+}/*# sourceMappingURL=AboutUs.css.map */

@@ -2,12 +2,12 @@ import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore" // CON ESTA FUNCION OBTENGO LA REFERENCIA A MI BASE DE DATOS DE FIRESTORE
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBCdHGLUpAo-4vdQYRNj0i1t_ERtkP27-0",
-  authDomain: "goat-hoops.firebaseapp.com",
-  projectId: "goat-hoops",
-  storageBucket: "goat-hoops.appspot.com",
-  messagingSenderId: "893137474985",
-  appId: "1:893137474985:web:f0eafa3c9d7f343615a0b8"
+  apiKey: process.env.REACT_APP_apiKey,
+  authDomain: process.env.REACT_APP_authDomain,
+  projectId: process.env.REACT_APP_projectId,
+  storageBucket: process.env.REACT_APP_storageBucket,
+  messagingSenderId: process.env.REACT_APP_messagingSenderId,
+  appId: process.env.REACT_APP_appId
 };
 
 // Initialize Firebase

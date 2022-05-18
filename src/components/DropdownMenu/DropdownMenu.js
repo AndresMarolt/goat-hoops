@@ -15,7 +15,6 @@ const DropdownMenu = () => {
     useEffect(() => {
         getDocs(collection(firestoreDDBB, 'categorias'))
             .then(response => {
-                console.log(response.docs);
                 const categorias = response.docs.map(doc => {
                     return {id: doc.id, ...doc.data()}
                 })
@@ -24,7 +23,6 @@ const DropdownMenu = () => {
         
         getDocs(collection(firestoreDDBB, 'categorias', 'camisetas', 'tipos'))
             .then(response => {
-                console.log(response.docs);
                 const tipos = response.docs.map(doc => {
                     return {id: doc.id, ...doc.data()}
                 })

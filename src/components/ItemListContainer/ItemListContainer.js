@@ -3,41 +3,28 @@ import ItemList from '../ItemList/ItemList';
 import BannerCarousel from '../BannerCarousel/BannerCarousel';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { getDocs, collection, query, where } from 'firebase/firestore';
-import { firestoreDDBB } from '../../services/firebase';
 import LoadingAnimation from '../LoadingAnimation/LoadingAnimation'
+import { getProducts } from '../../services/firebase/firestore';
 
 const ItemListContainer = () => {
 
     const [products, setProducts] = useState([]);
-    const [loading, setLoading] = useState(true);
+    const [loading, setLoading] = useState();
 
     const { categoriaId, tipoId } = useParams();
 
     useEffect(() => {
-
-        const queryConstraints = [];
-
-        queryConstraints.push(where('categoriaId', '==', categoriaId));
-        if(tipoId) queryConstraints.push(where('tipoId', '==', tipoId));
+        setLoading(true);
         
-        queryConstraints.forEach(tipo => console.log(tipo));
-        
-        const collectionRef = categoriaId ? query(collection(firestoreDDBB, 'products'), ...queryConstraints)
-                                          : collection(firestoreDDBB, 'products'); // TRAE TODOS LOS DOCUMENTOS (ELEMENTOS) DE LA COLECCION DE MI BASE DE DATOS DE FIREBASE, COLECCION CUYO NOMBRE ES 'PRODUCTS'
-
-        getDocs(collectionRef) 
-            .then(response => {
-                const products = response.docs.map(doc => {
-                    return { id: doc.id, ...doc.data()}
-                })
-                setProducts(products);
-            }).catch((error) => {
+        getProducts(categoriaId, tipoId)
+            .then(products => {
+                setProducts(products)
+            }).catch(error => {
                 console.log(error);
             }).finally(() => {
                 setLoading(false);
             })
-        
+            
     }, [categoriaId, tipoId])
 
     return (
@@ -52,7 +39,7 @@ const ItemListContainer = () => {
                     </div>
                     : 
                     <div className='Items-title'>
-                        <h1 className=''>{categoriaId} {tipoId && <span>tipoId</span>}</h1>
+                        <h1 className=''>{categoriaId} {tipoId && <span>{tipoId}</span>}</h1>
                     </div>}
 
                 {loading ? 

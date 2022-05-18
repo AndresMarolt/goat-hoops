@@ -1,8 +1,10 @@
-import { useState, useEffect, useContext } from "react";
+import { useState, useContext } from "react";
 import CartContext from "../../context/CartContext";
 import './BuyerForm.css'
 
+
 const BuyerForm = ({createOrder}) => {
+
 
     const [name, setName] = useState('');
     const [surname, setSurname] = useState('');
@@ -65,8 +67,9 @@ const BuyerForm = ({createOrder}) => {
 
             <div className='Cart_buttons'>
                 <button onClick={() => clearCart()} className="Cart_button">Vaciar Carrito</button>
-                <button onClick={() => createOrder(name, surname, address, floor, city, phone, email, dni)} className="Cart_button color-green">Generar Orden</button>
+                <button onClick={() => {createOrder(name, surname, address, city, floor, phone, email, dni)}} className="Cart_button color-green">Generar Orden</button>
             </div>
+
         </>
     )
 }

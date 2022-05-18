@@ -55,6 +55,13 @@ $blanco: #ffffff;
     }
 }
 
+.Cart_btn-quantity {
+    background-color: rgb(230, 230, 230);
+    border-radius: 5px;
+    margin: 0 5px;
+    color: black;
+}
+
 @media(min-width: 768px) {
     .Cart_list-item {
 

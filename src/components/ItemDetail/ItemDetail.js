@@ -23,7 +23,7 @@ const ItemDetail = ({id, nombre, img, precio, descripcion, stock}) => {
     const onAddFunction = (count) => {
 
         const productObj = {
-            id, nombre, precio, img
+            id, nombre, precio, img, stock
         }
 
         setQuantity(count);
@@ -41,11 +41,11 @@ const ItemDetail = ({id, nombre, img, precio, descripcion, stock}) => {
                     <p className="Detalle__precio">${precio}</p>
                     <p className="Detalle__descripcion">{descripcion}</p>
                     <div id="div">
-                        <ItemCount className="Item-count" stock={stock} initial={1} onAdd={onAddFunction} /> 
+                        <ItemCount className="Item-count" stock={stock} initial={1} onAdd={onAddFunction} />
                     </div>
                 </div>
 
-                {showNotification && <Notification type="success" text= {`Se {quantity>1 ? 'agregaron' : 'agregó'} {quantity} {quantity>1 ? 'unidades' : 'unidad'} de {nombre} al carrito correctamente`} />}
+                {showNotification && <Notification type="success" text= {`${nombre} agregado al carrito correctamente (${quantity} ${quantity>1 ? 'unidades' : 'unidad'}) `} />}
         </section>
     )
 }

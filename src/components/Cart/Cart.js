@@ -16,6 +16,9 @@ const Cart = () => {
     const [loading, setLoading] = useState(false);
     const [showForm, setShowForm] = useState(false);
     const [showNotification, setShowNotification] = useState(false);
+    const [notifStatus, setNotifStatus] = useState("");
+    const [notifText, setNotifText] = useState("");
+
 
     const {cart, getQuantity, getSubtotal, clearCart} = useContext(CartContext);
 
@@ -27,10 +30,12 @@ const Cart = () => {
         }
     }, [showNotification])
 
-    const createOrder = (name, surname, address, floor, city, phone, email, dni) => {
+    const createOrder = (name, surname, address, city, floor, phone, email, dni) => {
 
-        if(!name || !surname || !address || !city || !phone || !email || !dni) {
+        if(!name || !surname || !address || !city || !email || !dni) {
             setShowNotification(true);
+            setNotifStatus("error");
+            setNotifText("Debe completar todos los campos obligatorios");
             return;
         }
 
@@ -43,6 +48,7 @@ const Cart = () => {
                 phone: phone,
                 email: email,
                 address: address,
+                floor: floor,
                 city: city,
                 dni: dni
             },
@@ -50,10 +56,10 @@ const Cart = () => {
             date: new Date()
         }
     
-        const ids = cart.map(prod => prod.id );          
-        const batch = writeBatch(firestoreDDBB);         
-        const collectionRef = collection(firestoreDDBB, 'products') 
-        const outOfStock = [];                           
+        const ids = cart.map(prod => prod.id );
+        const batch = writeBatch(firestoreDDBB);
+        const collectionRef = collection(firestoreDDBB, 'products')
+        const outOfStock = [];
     
         getDocs(query(collectionRef, where(documentId(), 'in', ids)))    
             .then(response => {
@@ -78,6 +84,9 @@ const Cart = () => {
             }).then(({ id }) => {                               
                 batch.commit();                                  
                 console.log(`El ID de su orden es ${id}`);
+                setShowNotification(true);
+                setNotifStatus("success");
+                setNotifText("Orden generada correctamente")
                 clearCart();
             }).catch(error => {
                 console.log(error);
@@ -90,6 +99,9 @@ const Cart = () => {
         return(
             <div className="Cart">
                 <h1 className='Cart_title Cart_empty'>Carrito Vacío</h1>
+
+                {showNotification && <Notification type={notifStatus} text={notifText}/>}
+
             </div>
         )
     } 
@@ -129,10 +141,8 @@ const Cart = () => {
 
                         </div>
 
-                        {showNotification && <Notification type="error" text="Debe llenar todos los campos obligatorios"/>}
-                        
+                        {showNotification && <Notification type={notifStatus} text={notifText}/>}
                     </>
-
             }
         </div>
     )
