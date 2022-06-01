@@ -1,32 +1,61 @@
-.hidden {
-  display: none;
+.dropdown {
+  position: relative;
+  display: inline-block;
 }
-
-.dropdown-menu {
-  position: absolute;
-  inset: 30px auto auto 0px;
-  margin: 0px;
-  transition: 0.5s ease;
-  transform: unset;
-  color: black;
+.dropdown #btnMenu {
+  color: white;
 }
-.dropdown-menu .btn-submenu {
-  font-weight: normal;
-  color: black;
-  box-shadow: unset;
-  padding: 0.25rem 1rem;
-}
-.dropdown-menu .dropdown-item {
+.dropdown .dropbtn {
+  cursor: pointer;
   text-decoration: none;
-  font-size: 1.4rem;
+  font-size: 16px;
+  background-color: unset;
+}
+.dropdown .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  width: 130px;
+  list-style-type: none;
+  padding: 0;
+}
+.dropdown .dropdown-content a, .dropdown .dropdown-content button {
+  text-align: center;
+  display: block !important;
+  width: 100%;
+  color: black;
+  text-decoration: none;
+  background-color: #ffffff;
+  padding: 5px 0;
+}
+.dropdown .dropdown-content a:hover, .dropdown .dropdown-content button:hover {
+  background-color: rgb(255, 206, 206);
+  transition: 0.3s ease;
+}
+.dropdown .showDropdown {
+  display: block;
+}
+.dropdown .submenuBtn {
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 1.6rem;
+  background-color: unset;
+  font-weight: normal;
+  /* Dropdown button on hover & focus */
+}
+.dropdown .submenu {
+  left: 130px;
+  top: 0px;
+  width: 150px;
+}
+.dropdown .submenu-item {
   text-transform: capitalize;
 }
-.dropdown-menu li:not(:last-of-type) {
-  border-bottom: 1px solid rgb(220, 220, 220);
-}
 
-@media (min-width: 768px) {
-  .dropdown-menu .dropdown-item {
+@media (min-width: 992px) {
+  .dropdown .dropbtn {
     font-size: 1.6rem;
   }
 }/*# sourceMappingURL=DropdownMenu.css.map */

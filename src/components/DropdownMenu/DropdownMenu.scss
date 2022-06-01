@@ -7,41 +7,89 @@ $lg-fontsize: 1.6rem;
 $azul: #17408B;
 $rojo: #C9082A;
 
-.hidden {
-    display: none;
-}
 
-.dropdown-menu {
+.dropdown {
+    position: relative;
+    display: inline-block;
 
-    position: absolute;
-    inset: 30px auto auto 0px;
-    margin: 0px;
-    transition: .5s ease;
-    transform: unset;
-    color: black;
-
-    .btn-submenu {
-        font-weight: normal;
-        color: black;
-        box-shadow: unset;
-        padding: 0.25rem 1rem;
+    #btnMenu {
+        color: white;
     }
-
-    .dropdown-item {
+    
+    .dropbtn {
+        cursor: pointer;
         text-decoration: none;
-        font-size: $sm-fontsize;
-        text-transform: capitalize;
+        font-size: 16px;
+        background-color: unset;
+        
+        &:hover, .dropbtn:focus {
+            
+        }
     }
-    li:not(:last-of-type) {
-        border-bottom: 1px solid rgb(220, 220, 220);
+    
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1000;
+        width: 130px;
+        list-style-type: none;
+        padding: 0;
+        
+        a, button {
+            text-align: center;
+            display: block !important;
+            width: 100%;
+            color: black;
+            text-decoration: none;
+            background-color: #ffffff;
+            padding: 5px 0;
+            
+            &:not(:last-child) {
+            }
+
+            &:hover {
+                background-color: rgb(255, 206, 206);
+                transition: .3s ease;
+            }
+        }
+    }
+    
+    .showDropdown {
+        display:block;
+    }
+
+    .submenuBtn {
+        cursor: pointer;
+        text-decoration: none;
+        font-size: 1.6rem;
+        background-color: unset;
+        font-weight: normal;
+        
+        /* Dropdown button on hover & focus */
+        &:hover, .dropbtn:focus {
+            
+        }
+    }
+
+    .submenu {
+        left: 130px;
+        top: 0px;
+        width: 150px;
+
+        &-item {
+            text-transform: capitalize;
+        }
     }
 }
-
 
 @media(min-width: 768px) {
-    .dropdown-menu {
-        .dropdown-item {
-            font-size: $lg-fontsize;
-        }
+
+}
+
+@media(min-width: 992px) {
+    .dropdown .dropbtn {
+        font-size: $lg-fontsize;
     }
 }

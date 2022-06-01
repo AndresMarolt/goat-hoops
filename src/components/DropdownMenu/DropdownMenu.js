@@ -1,13 +1,19 @@
-import '../../../node_modules/bootstrap/dist/css/bootstrap.css'
-import '../../../node_modules/bootstrap/dist/js/bootstrap'
+
 import './DropdownMenu.css'
 import { NavLink } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { getDocs, collection } from "firebase/firestore";
 import { firestoreDDBB } from '../../services/firebase'
+import userEvent from '@testing-library/user-event';
 
 
 const DropdownMenu = () => {
+
+    const menuRef = useRef(null);
+    const [menuShow, setMenuShow] = useState(false);
+
+    const subMenuRef = useRef(null);
+    const [submenuShow, setSubmenuShow] = useState(false);
 
     const [categorias, setCategorias] = useState([]);
     const [tipos, setTipos] = useState([]);
@@ -30,23 +36,39 @@ const DropdownMenu = () => {
             })
     }, [])
 
+    useEffect(() => {
+
+        console.log(menuRef);
+        const handleClickOutsideDropdown = (event) => {
+            if ( (menuRef.current && !menuRef.current.contains(event.target)) && (subMenuRef.current && !subMenuRef.current.contains(event.target))  ) {
+                setMenuShow(false);
+            }
+        }
+
+        document.addEventListener("mousedown", handleClickOutsideDropdown);
+        return () => {
+            // Unbind the event listener on clean up
+            document.removeEventListener("mousedown", handleClickOutsideDropdown);
+        };
+    }, [menuRef])
+
     return(
-        <div className="btn-group dropdown">
-            <button className="btn dropdown-toggle link" type="button" id="dropdownMenuClickableInside" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+        <div className="dropdown">
+            <button className="navegacion-enlace dropbtn" ref={menuRef} onClick={(e) => {setMenuShow(!menuShow); setSubmenuShow(false)}}>
                 Productos
             </button>
-            <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <ul className={`dropdown-content ${menuShow ? "showDropdown" : ""}`}>
 
                 {categorias.map(cat => 
                     cat.id === 'camisetas' ? 
                         <li key="dropdend">
-                            <div className="btn-group dropend">
-                                <button key={cat.id} className="dropdown-toggle link btn-submenu dropdown-item" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+                            <div className="">
+                                <button key={cat.id} ref={subMenuRef} className="navegacion-enlace submenuBtn" onClick={() => {setSubmenuShow(!submenuShow); }}>
                                     {cat.descripcion}
                                 </button>
-                                <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+                                <ul className={`submenu dropdown-content ${submenuShow ? "showDropdown" : ""}`}>
                                     {tipos.map(tipo => 
-                                        <li key={tipo.id}><NavLink to={`/categoria/camisetas/${tipo.id}`} className="dropdown-item subitem">{tipo.descripcion}</NavLink></li>    
+                                        <li key={tipo.id}><NavLink to={`/categoria/camisetas/${tipo.id}`} className="submenu-item">{tipo.descripcion}</NavLink></li>    
                                     )}
                                 </ul>
                             </div>
