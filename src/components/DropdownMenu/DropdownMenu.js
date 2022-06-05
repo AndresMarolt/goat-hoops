@@ -4,6 +4,7 @@ import { NavLink } from "react-router-dom";
 import { useState, useEffect, useRef } from "react";
 import { getDocs, collection } from "firebase/firestore";
 import { firestoreDDBB } from '../../services/firebase'
+import { Link } from 'react-router-dom';
 import userEvent from '@testing-library/user-event';
 
 
@@ -40,8 +41,13 @@ const DropdownMenu = () => {
 
         console.log(menuRef);
         const handleClickOutsideDropdown = (event) => {
+            console.log(event.target);
             if ( (menuRef.current && !menuRef.current.contains(event.target)) && (subMenuRef.current && !subMenuRef.current.contains(event.target))  ) {
-                setMenuShow(false);
+                // console.log("SE CLICKEO FUERA DEL MENU Y DEL SUBMENU");
+                setTimeout(() => {
+                    setMenuShow(false);
+                    
+                }, 300);
             }
         }
 

@@ -22,9 +22,6 @@ $rojo: #C9082A;
         font-size: 16px;
         background-color: unset;
         
-        &:hover, .dropbtn:focus {
-            
-        }
     }
     
     .dropdown-content {
@@ -45,9 +42,6 @@ $rojo: #C9082A;
             text-decoration: none;
             background-color: #ffffff;
             padding: 5px 0;
-            
-            &:not(:last-child) {
-            }
 
             &:hover {
                 background-color: rgb(255, 206, 206);
@@ -67,10 +61,6 @@ $rojo: #C9082A;
         background-color: unset;
         font-weight: normal;
         
-        /* Dropdown button on hover & focus */
-        &:hover, .dropbtn:focus {
-            
-        }
     }
 
     .submenu {
